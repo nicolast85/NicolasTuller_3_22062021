@@ -10,6 +10,8 @@
         <script src="https://kit.fontawesome.com/4fc2a5c12f.js" crossorigin="anonymous"></script>
         <!--Responsive-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Polices-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
         <!--Titre de l'onglet-->
         <title>ohmyfood</title>
     </head>
@@ -26,36 +28,30 @@
             <input class="localisation__texte" placeholder="Paris, Belleville">
         </div>
         <div class="decouverte">
-            <h2>Réservez le menu qui vous convient</h2>
+            <h2>Réservez le menu qui<br>
+                vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             <a href="#" class="decouverte__bouton"> Explorer nos restaurants </a>
         </div>
         <div class="fonctionnement">
-            <h1>fonctionnement</h1>
-            <a href="#">
-                <div class="fonctionnement__choix">
-                <div class="choix__icone">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                </div>
-            </a>
-            <a href="#">
-                <h3>Choisissez un restaurant</h3>
-                <div class="fonctionnement__composition">
-                <div class="composition__icone">
-                    <i class="fas fa-list-ul"></i>
-                </div>
-                <h3>Composez votre menu</h3>
-                </div>
-            </a>
-            <a href="#">
-                <div class="fonctionnement__degustation">
-                <div class="degustation__icone">
-                    <i class="fas fa-store"></i>
-                </div>
-                <h3>Dégustez au restaurant</h3>
-                </div>
-            </a>
+            <h1>Fonctionnement</h1>
+            <ol class="fonctionnement__menu">
+                <li class="fonctionnement__choix">
+                        <span class="numero">1</span>                   
+                        <i class="fas fa-mobile-alt" style="color:#7e7e7e;"></i>
+                        <span class="choix">Choisissez un restaurant</span>                                                     
+                </li>
+                <li class="fonctionnement__composition">
+                        <span class="numero">2</span>
+                        <i class="fas fa-list-ul" style="color:#7e7e7e;"></i>
+                        <span class="choix">Composez votre menu</span>
+                </li>         
+                <li class="fonctionnement__degustation">
+                        <span class="numero">3</span>
+                        <i class="fas fa-store" style="color:#9356DC;"></i>
+                        <span class="choix">Dégustez au restaurant</span>
+                </li>
+            </ol>
         </div>
     </section>
     <section class="restaurant">
@@ -128,21 +124,21 @@
         <nav>           
             <a href="#">
                 <div class="icone__proposition">
-                    <i class="fas fa-utensils"></i>
-                </div> 
+                    <i class="fas fa-utensils"></i>               
                     <p>Proposer un restaurant</p>
+                </div>
             </a>            
             <a href="#">
                 <div class="icone__partenaire">
-                    <i class="fas fa-hands-helping"></i>
-                </div>
+                    <i class="fas fa-hands-helping" style="font-size:70%;"></i>
                     <p>Devenir partenaire</p>
+                </div>
             </a>    
             <p>
                 <a href="#">Mentions légales</a>
             </p>
             <p>
-                <a href="mailto:email@contact.com?subject=HTML link">Contact</a>
+                <a href="mailto:email@ohmyfood.com?subject=HTML link">Contact</a>
             </p>
         </nav>
     </footer>
