@@ -226,4 +226,94 @@ body {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    /*page A la Française bug*/
+    .photo_a_la_francaise {
+        background-image: url("../images/photos/a_la_francaise.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .menu {
+        background-color: #f6f6f6;
+        border-radius: 40px 40px 0px 0px;
+    }
+    .legende {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 10px;
+        position: relative;
+    }
+    .legende h1 {
+        font-family: 'Shrikhand';
+        font-size: 23px;
+        padding-left: 20px;
+        white-space: nowrap;
+    }
+    .icone__legende {
+        left: 320px;
+        top: 37px;
+        position: absolute;
+    }
+    .entrees h3, .plats h3, .desserts h3 {
+        padding-left: 20px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .entrees__choix1, .entrees__choix2, .entrees__choix3, .entrees__choix4,
+    .plats__choix1, .plats__choix2, .plats__choix3,
+    .desserts__choix1, .desserts__choix2, .desserts__choix3 {
+        padding: 15px;
+        margin: 15px;
+        border-radius: 1.25rem;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 12%);
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .entrees__choix1--titre, .entrees__choix2--titre, .entrees__choix3--titre, .entrees__choix4--titre,
+    .plats__choix1--titre, .plats__choix2--titre, .plats__choix3--titre,
+    .desserts__choix1--titre, .desserts__choix2--titre, .desserts__choix3--titre {
+        grid-column-start: 1;
+        grid-column: span 3;
+        grid-row: 1;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .entrees__choix1--indication, .entrees__choix2--indication, .entrees__choix3--indication, .entrees__choix4--indication,
+    .plats__choix1--indication, .plats__choix2--indication, .plats__choix3--indication,
+    .desserts__choix1--indication, .desserts__choix2--indication, .desserts__choix3--indication {
+        grid-column-start: 1;
+        grid-column: span 3;
+        font-size: 13px;
+        height: 20px;
+        margin-top: -10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .entrees__choix1--tarif, .entrees__choix2--tarif, .entrees__choix3--tarif, .entrees__choix4--tarif,
+    .plats__choix1--tarif, .plats__choix2--tarif, .plats__choix3--tarif,
+    .desserts__choix1--tarif, .desserts__choix2--tarif, .desserts__choix3--tarif {
+        grid-column-start: 4;
+        grid-row: 2;
+        padding-left: 50px;
+        padding-top: 10px;
+        font-weight: 700;
+        margin-top: -10px;
+    }
+    .commande__bouton {
+        display: flex;
+        justify-content: center;
+    }
+    .commande__bouton input {
+        text-decoration: none;
+        border: 0;
+        padding: .75rem 1.5rem;
+        font-weight: 500;
+        font-size: 15px;
+        border-radius: 100px;
+        color: #fff;
+        background-color: #d123c8;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
 }
