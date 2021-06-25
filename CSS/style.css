@@ -111,8 +111,92 @@ body {
     .choix {
         font-weight: bold;
     }
+    .restaurant {
+        background-color: #f6f6f6;
+        margin-top: 60px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    .restaurant h1 {
+        padding-left: 20px;
+    }
+    .carte {
+        border-radius: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        position: relative;
+    }
+    .carte a {
+        text-decoration: none;
+        color: black;
+    }
+    .carte__legende {
+        border-radius: 0px 0px 15px 15px;
+        background-color: #fff;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 5px;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .carte__nom {
+        grid-column-start: 1;
+        grid-row: 1;
+    }
+    .carte__lieu {
+        font-size: 14px;
+        grid-column-start: 1;
+        grid-row: 2;
+    }
+    .carte_icone {
+        grid-column-start: 2;
+        grid-row: span 2;
+        padding-left: 100px;
+        padding-top: 10px;
+    }
+    .nouveau {
+        background-color: #99e2d0;
+        color: #1b6150;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 7px;
+        border-radius: 2px;
+        font-weight: bold;
+    }
+    .la_palette_du_gout {
+        background-image: url("../images/photos/la_palette_du_gout.jpg");
+        background-size: cover;
+        border-radius: 15px 15px 0px 0px;
+        background-position: center;
+        height: 180px;
+    }
+    .la_note_enchantee {
+        background-image: url("../images/photos/la_note_enchantee.jpg");
+        background-size: cover;
+        border-radius: 15px 15px 0px 0px;
+        background-position: center;
+        height: 180px;
+    }
+    .a_la_francaise {
+        background-image: url("../images/photos/a_la_francaise.jpg");
+        background-size: cover;
+        border-radius: 15px 15px 0px 0px;
+        background-position: center;
+        height: 180px;
+    }
+    .le_délice_des_sens {
+        background-image: url("../images/photos/le_delice_des_sens.jpg");
+        background-size: cover;
+        border-radius: 15px 15px 0px 0px;
+        background-position: center;
+        height: 180px;
+    }
     footer {
         background-color: #353535;
+        margin-top: -20px;
     }
     footer h2 {
         color: #fff;
