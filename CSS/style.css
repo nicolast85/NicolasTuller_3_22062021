@@ -68,12 +68,12 @@ body {
     .decouverte__bouton {
         text-decoration: none;
         border: 0;
-        padding: .75rem 1.5rem;
+        padding: 12px 30px;
         font-weight: 500;
-        font-size: 1.1rem;
+        font-size: 15px;
         border-radius: 100px;
         color: #fff;
-        background-color: #d123c8;
+        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     }
     .fonctionnement h1 {
         margin-left: 30px;
@@ -92,6 +92,17 @@ body {
         background-color: #f6f6f6;
         display: flex;
         column-gap: 30px;
+    }
+    .fonctionnement__choix:hover,
+    .fonctionnement__composition:hover, 
+    .fonctionnement__degustation:hover {
+        background-color: #f5edff;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 20%);
+    }
+    .fonctionnement__choix:hover .fas,
+    .fonctionnement__composition:hover .fas, 
+    .fonctionnement__degustation:hover .fas {
+        color: #9356DC;
     }
     .fonctionnement__choix .fas, 
     .fonctionnement__composition .fas, 
@@ -196,7 +207,7 @@ body {
     }
     footer {
         background-color: #353535;
-        margin-top: -20px;
+        margin-top: -60px;
     }
     footer h2 {
         color: #fff;
@@ -205,6 +216,7 @@ body {
         margin-bottom: 8px;
         margin-left: 25px;
         padding-top: 30px;
+        font-weight: normal;
     }
     nav {
         padding-bottom: 20px;
@@ -226,15 +238,40 @@ body {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    /*page A la Française bug*/
+    /*Mise en page photo page restaurant*/
     .photo_a_la_francaise {
         background-image: url("../images/photos/a_la_francaise.jpg");
         background-size: cover;
         background-position: center;
+        margin-top: 10px;
+        height: 300px;
+    }
+    .photo_la_palette_du_gout {
+        background-image: url("../images/photos/la_palette_du_gout.jpg");
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+        height: 300px;
+    }
+    .photo_la_note_enchantée {
+        background-image: url("../images/photos/la_note_enchantee.jpg");
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+        height: 300px;
+    }
+    .photo_le_délice_des_sens {
+        background-image: url("../images/photos/le_delice_des_sens.jpg");
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+        height: 300px;
     }
     .menu {
         background-color: #f6f6f6;
         border-radius: 40px 40px 0px 0px;
+        position: relative;
+        top: -40px;
     }
     .legende {
         display: grid;
@@ -257,6 +294,19 @@ body {
         padding-left: 20px;
         font-size: 13px;
         font-weight: 400;
+    }
+    hr {
+        width: 32px;
+        height: 3px;
+        border-style: none;
+        background-color: #99E2D0;
+        position: relative;
+        right: 40.5%;
+        margin-top: -10px;
+    }
+    .plats {
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     .entrees__choix1, .entrees__choix2, .entrees__choix3, .entrees__choix4,
     .plats__choix1, .plats__choix2, .plats__choix3,
@@ -299,6 +349,14 @@ body {
         font-weight: 700;
         margin-top: -10px;
     }
+    /*a travailler.choix {
+        background-color: #99E2D0;
+        border-radius: 0 15px 15px 0;
+        width: 0;
+        padding: 24px 0;
+        text-align: center;
+        color: white;
+    }*/
     .commande__bouton {
         display: flex;
         justify-content: center;
@@ -306,14 +364,36 @@ body {
     .commande__bouton input {
         text-decoration: none;
         border: 0;
-        padding: .75rem 1.5rem;
-        font-weight: 500;
+        padding: 12px 30px;
+        font-weight: 600;
         font-size: 15px;
         border-radius: 100px;
         color: #fff;
-        background-color: #d123c8;
+        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
         cursor: pointer;
         margin-top: 30px;
         margin-bottom: 70px;
+        width: 170px;
+    }
+    /*Style des icones*/
+    .localisation .fas {
+        color: black;
+    }
+    .fonctionnement__choix .fas, 
+    .fonctionnement__composition .fas, 
+    .fonctionnement__degustation .fas {
+        color: #7e7e7e;
+    }
+    .carte_icone .far {
+        font-size: 150%;
+    }
+    .icone__proposition .fas {
+        font-size: 105%;
+    }
+    .icone__partenaire .fas {
+        font-size: 70%;
+    }
+    .logo__mainb .fas {
+        color: black;
     }
 }
