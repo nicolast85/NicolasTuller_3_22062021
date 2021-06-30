@@ -4,6 +4,25 @@ body {
   margin: 0;
 }
 
+/*----Animation icone coeur---*/
+.carte_icone .far {
+  color: #000;
+}
+
+.carte_icone .far::before {
+  content: "\f004";
+  /*content value du coeur sur FontAwesome*/
+  -webkit-transition: color 1000ms ease-out;
+  transition: color 1000ms ease-out;
+}
+
+.carte_icone .far:hover {
+  color: #FF79DA;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*----Version Mobile----*/
 @media all and (max-width: 700px) {
   #bloc_page {
     width: auto;
@@ -453,6 +472,8 @@ body {
   /*--------------------------------*/
   /*----------Animations------------*/
   /*--------------------------------*/
+  /*---*/
+  /*---Animation page d'accueil---*/
   @-webkit-keyframes loadingspinner {
     0% {
       opacity: 1;
@@ -516,6 +537,84 @@ body {
   .loadingspinner__icone--3 .fas {
     color: #99E2D0;
     font-size: 300%;
+  }
+  /*---Animation des menus---*/
+  @-webkit-keyframes menuchoix {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+    33% {
+      opacity: 0.33;
+    }
+    66% {
+      opacity: 0.66;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes menuchoix {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+    33% {
+      opacity: 0.33;
+    }
+    66% {
+      opacity: 0.66;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  .entrees__choix1 {
+    /*---------nom_______durée_____delay_fill-mode*/
+    -webkit-animation: menuchoix 1500ms 500ms both;
+            animation: menuchoix 1500ms 500ms both;
+  }
+  .entrees__choix2 {
+    -webkit-animation: menuchoix 1500ms 600ms both;
+            animation: menuchoix 1500ms 600ms both;
+  }
+  .entrees__choix3 {
+    -webkit-animation: menuchoix 1500ms 700ms both;
+            animation: menuchoix 1500ms 700ms both;
+  }
+  .entrees__choix4 {
+    -webkit-animation: menuchoix 1500ms 800ms both;
+            animation: menuchoix 1500ms 800ms both;
+  }
+  .plats__choix1 {
+    -webkit-animation: menuchoix 1500ms 900ms both;
+            animation: menuchoix 1500ms 900ms both;
+  }
+  .plats__choix2 {
+    -webkit-animation: menuchoix 1500ms 1000ms both;
+            animation: menuchoix 1500ms 1000ms both;
+  }
+  .plats__choix3 {
+    -webkit-animation: menuchoix 1500ms 1100ms both;
+            animation: menuchoix 1500ms 1100ms both;
+  }
+  .desserts__choix1 {
+    -webkit-animation: menuchoix 1500ms 1200ms both;
+            animation: menuchoix 1500ms 1200ms both;
+  }
+  .desserts__choix2 {
+    -webkit-animation: menuchoix 1500ms 1300ms both;
+            animation: menuchoix 1500ms 1300ms both;
+  }
+  .desserts__choix3 {
+    -webkit-animation: menuchoix 1500ms 1400ms both;
+            animation: menuchoix 1500ms 1400ms both;
   }
 }
 /*# sourceMappingURL=animation.css.map */

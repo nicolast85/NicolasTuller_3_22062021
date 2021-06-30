@@ -2,6 +2,20 @@ body {
     font-family: 'Roboto', 'Shrikhand', Arial, 'Arial Black', 'Comic Sans MS', Georgia, 'Times New Roman', Times, serif;
     margin: 0;
 }
+/*----Animation icone coeur---*/
+.carte_icone .far {
+    color: #000;
+}
+.carte_icone .far::before {
+    content: "\f004"; /*content value du coeur sur FontAwesome*/
+    transition: color 1000ms ease-out;
+}
+.carte_icone .far:hover {
+    color: #FF79DA;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*----Version Mobile----*/
 @media all and (max-width: 700px) {
     #bloc_page {
         width: auto;
@@ -400,6 +414,8 @@ body {
     /*--------------------------------*/
     /*----------Animations------------*/
     /*--------------------------------*/
+    /*---*/
+    /*---Animation page d'accueil---*/
     @keyframes loadingspinner{
         0% {
             opacity: 1;
@@ -438,5 +454,56 @@ body {
     .loadingspinner__icone--3 .fas {
         color: #99E2D0;
         font-size: 300%;   
+    }
+    /*---Animation des menus---*/
+    @keyframes menuchoix{
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        33% {
+            opacity: 0.33;
+        }
+        66% {
+            opacity: 0.66;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }      
+    }
+
+    $anim-dur: 1500ms;
+
+    .entrees__choix1 {
+        /*---------nom_______durée_____delay_fill-mode*/
+        animation: menuchoix $anim-dur 500ms both;
+    }
+    .entrees__choix2 {
+        animation: menuchoix $anim-dur 600ms both;
+    }
+    .entrees__choix3 {
+        animation: menuchoix $anim-dur 700ms both;
+    }
+    .entrees__choix4 {
+        animation: menuchoix $anim-dur 800ms both;
+    }
+    .plats__choix1 {
+        animation: menuchoix $anim-dur 900ms both;
+    }
+    .plats__choix2 {
+        animation: menuchoix $anim-dur 1000ms both;
+    }
+    .plats__choix3 {
+        animation: menuchoix $anim-dur 1100ms both;
+    }
+    .desserts__choix1 {
+        animation: menuchoix $anim-dur 1200ms both;
+    }
+    .desserts__choix2 {
+        animation: menuchoix $anim-dur 1300ms both;
+    }
+    .desserts__choix3 {
+        animation: menuchoix $anim-dur 1400ms both;
     }
 }
