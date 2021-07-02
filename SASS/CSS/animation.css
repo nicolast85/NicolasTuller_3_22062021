@@ -87,15 +87,35 @@ body {
     margin: 1.5rem 0;
   }
   .decouverte__bouton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .decouverte__bouton:hover input {
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    opacity: 0.80;
+    -webkit-box-shadow: 0px 10px 5px lightgrey;
+            box-shadow: 0px 10px 5px lightgrey;
+  }
+  .decouverte__bouton input {
     text-decoration: none;
     border: 0;
     padding: 12px 30px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 15px;
     border-radius: 100px;
+    -webkit-box-shadow: 0px 5px 5px lightgrey;
+            box-shadow: 0px 5px 5px lightgrey;
     color: #fff;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
   .fonctionnement h1 {
     margin-left: 30px;
@@ -379,6 +399,9 @@ body {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .entrees__choix1--titre, .entrees__choix2--titre, .entrees__choix3--titre, .entrees__choix4--titre,
   .plats__choix1--titre, .plats__choix2--titre, .plats__choix3--titre,
@@ -414,15 +437,133 @@ body {
     padding-top: 10px;
     font-weight: 700;
     margin-top: -10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
-  /*a travailler.choix {
-        background-color: #99E2D0;
-        border-radius: 0 15px 15px 0;
-        width: 0;
-        padding: 24px 0;
-        text-align: center;
-        color: white;
-    }*/
+  /*---Animation choix menu---*/
+  @-webkit-keyframes choix {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(-60px);
+              transform: translateX(-60px);
+    }
+  }
+  @keyframes choix {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(-60px);
+              transform: translateX(-60px);
+    }
+  }
+  @-webkit-keyframes choix__icone {
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes choix__icone {
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes tarif {
+    100% {
+      -webkit-transform: translateX(-60px);
+              transform: translateX(-60px);
+    }
+  }
+  @keyframes tarif {
+    100% {
+      -webkit-transform: translateX(-60px);
+              transform: translateX(-60px);
+    }
+  }
+  .entrees__choix1:hover .choix,
+  .entrees__choix2:hover .choix,
+  .entrees__choix3:hover .choix,
+  .entrees__choix4:hover .choix,
+  .plats__choix1:hover .choix,
+  .plats__choix2:hover .choix,
+  .plats__choix3:hover .choix,
+  .desserts__choix1:hover .choix,
+  .desserts__choix2:hover .choix,
+  .desserts__choix3:hover .choix {
+    -webkit-animation: choix 700ms both;
+            animation: choix 700ms both;
+  }
+  .entrees__choix1:hover .choix__icone,
+  .entrees__choix2:hover .choix__icone,
+  .entrees__choix3:hover .choix__icone,
+  .entrees__choix4:hover .choix__icone,
+  .plats__choix1:hover .choix__icone,
+  .plats__choix2:hover .choix__icone,
+  .plats__choix3:hover .choix__icone,
+  .desserts__choix1:hover .choix__icone,
+  .desserts__choix2:hover .choix__icone,
+  .desserts__choix3:hover .choix__icone {
+    -webkit-animation: choix__icone 700ms both;
+            animation: choix__icone 700ms both;
+  }
+  .entrees__choix1:hover .entrees__choix1--tarif,
+  .entrees__choix2:hover .entrees__choix2--tarif,
+  .entrees__choix3:hover .entrees__choix3--tarif,
+  .entrees__choix4:hover .entrees__choix4--tarif,
+  .plats__choix1:hover .plats__choix1--tarif,
+  .plats__choix2:hover .plats__choix2--tarif,
+  .plats__choix3:hover .plats__choix3--tarif,
+  .desserts__choix1:hover .desserts__choix1--tarif,
+  .desserts__choix2:hover .desserts__choix2--tarif,
+  .desserts__choix3:hover .desserts__choix3--tarif {
+    -webkit-animation: tarif 700ms both;
+            animation: tarif 700ms both;
+  }
+  .choix {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    background-color: #99E2D0;
+    margin: -2.2rem -5rem -1rem 1rem;
+    width: 4rem;
+    border-radius: 0 1.25rem 1.25rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0;
+    margin-left: 90px;
+  }
+  .choix__icone {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 100px;
+  }
+  .choix__icone .far {
+    color: #99E2D0;
+    font-size: 200%;
+  }
   .commande__bouton {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -431,6 +572,13 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .commande__bouton:hover input {
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    opacity: 0.80;
+    -webkit-box-shadow: 0px 10px 5px lightgrey;
+            box-shadow: 0px 10px 5px lightgrey;
+  }
   .commande__bouton input {
     text-decoration: none;
     border: 0;
@@ -438,6 +586,8 @@ body {
     font-weight: 600;
     font-size: 15px;
     border-radius: 100px;
+    -webkit-box-shadow: 0px 5px 5px lightgrey;
+            box-shadow: 0px 5px 5px lightgrey;
     color: #fff;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -613,6 +763,42 @@ body {
   .desserts__choix3 {
     -webkit-animation: menuchoix 1500ms 1400ms both;
             animation: menuchoix 1500ms 1400ms both;
+  }
+  /*---Animation coeur aux clics---*/
+  .icone__legende .heart {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+  }
+  .icone__legende .heart-color {
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), color-stop(35%, #d66cdb), color-stop(70%, #ab5edc), to(#9b59dc));
+    background: linear-gradient(0deg, #ff79da 0%, #d66cdb 35%, #ab5edc 70%, #9b59dc 100%);
+    /*Un dégradé qui démarre du bas et va vers le haut qui commence au rose à 0% et fini au magenta à 100% avec 2 étapes à 35 et 70%*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    /*pas supporté par chrome donc obligé de passer par webkit*/
+    color: transparent;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+  }
+  .heart:active .heart-color, .heart:focus .heart-color {
+    /*A TRAVAILLER*/
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  .heart:active, .heart:focus {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), color-stop(35%, #d66cdb), color-stop(70%, #ab5edc), to(#9b59dc));
+    background: linear-gradient(0deg, #ff79da 0%, #d66cdb 35%, #ab5edc 70%, #9b59dc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }
 

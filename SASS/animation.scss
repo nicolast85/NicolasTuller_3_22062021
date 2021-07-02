@@ -67,14 +67,27 @@ body {
         margin: 1.5rem 0;
     }
     .decouverte__bouton {
+        display: flex;
+        justify-content: center;
+    }
+    .decouverte__bouton:hover input {
+        transition-duration: 1000ms;
+        opacity: 0.80;
+        box-shadow: 0px 10px 5px lightgrey;
+    }
+    .decouverte__bouton input {
         text-decoration: none;
         border: 0;
         padding: 12px 30px;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 15px;
         border-radius: 100px;
+        box-shadow: 0px 5px 5px lightgrey;
         color: #fff;
         background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 50px;
     }
     .fonctionnement h1 {
         margin-left: 30px;
@@ -332,6 +345,9 @@ body {
         background-color: #fff;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     .entrees__choix1--titre, .entrees__choix2--titre, .entrees__choix3--titre, .entrees__choix4--titre,
     .plats__choix1--titre, .plats__choix2--titre, .plats__choix3--titre,
@@ -362,18 +378,99 @@ body {
         padding-top: 10px;
         font-weight: 700;
         margin-top: -10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
-    /*a travailler.choix {
+    /*---Animation choix menu---*/
+    @keyframes choix{
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(-60px);
+        }       
+    }
+    @keyframes choix__icone {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes tarif {
+        100% {
+            transform: translateX(-60px);
+        }
+    }
+    .entrees__choix1:hover .choix, 
+    .entrees__choix2:hover .choix, 
+    .entrees__choix3:hover .choix, 
+    .entrees__choix4:hover .choix,
+    .plats__choix1:hover .choix,
+    .plats__choix2:hover .choix,
+    .plats__choix3:hover .choix,
+    .desserts__choix1:hover .choix,
+    .desserts__choix2:hover .choix,
+    .desserts__choix3:hover .choix {
+        animation: choix 700ms both;
+    }
+    .entrees__choix1:hover .choix__icone, 
+    .entrees__choix2:hover .choix__icone,
+    .entrees__choix3:hover .choix__icone, 
+    .entrees__choix4:hover .choix__icone,
+    .plats__choix1:hover .choix__icone,
+    .plats__choix2:hover .choix__icone,
+    .plats__choix3:hover .choix__icone,
+    .desserts__choix1:hover .choix__icone,
+    .desserts__choix2:hover .choix__icone,
+    .desserts__choix3:hover .choix__icone {
+        animation: choix__icone 700ms both;
+    }
+    .entrees__choix1:hover .entrees__choix1--tarif, 
+    .entrees__choix2:hover .entrees__choix2--tarif,
+    .entrees__choix3:hover .entrees__choix3--tarif, 
+    .entrees__choix4:hover .entrees__choix4--tarif,
+    .plats__choix1:hover .plats__choix1--tarif,
+    .plats__choix2:hover .plats__choix2--tarif,
+    .plats__choix3:hover .plats__choix3--tarif,
+    .desserts__choix1:hover .desserts__choix1--tarif,
+    .desserts__choix2:hover .desserts__choix2--tarif,
+    .desserts__choix3:hover .desserts__choix3--tarif {
+        animation: tarif 700ms both;
+    }
+    .choix {
+        grid-column-start: 4;
+        grid-row: 2;
         background-color: #99E2D0;
-        border-radius: 0 15px 15px 0;
-        width: 0;
-        padding: 24px 0;
-        text-align: center;
-        color: white;
-    }*/
+        margin: -2.2rem -5rem -1rem 1rem;
+        width: 4rem;
+        border-radius: 0 1.25rem 1.25rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        margin-left: 90px;
+    }
+    .choix__icone {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+    }
+    .choix__icone .far {
+        color: #99E2D0;
+        font-size: 200%;
+    }
     .commande__bouton {
         display: flex;
         justify-content: center;
+    }
+    .commande__bouton:hover input {
+        transition-duration: 1000ms;
+        opacity: 0.80;
+        box-shadow: 0px 10px 5px lightgrey;
     }
     .commande__bouton input {
         text-decoration: none;
@@ -382,6 +479,7 @@ body {
         font-weight: 600;
         font-size: 15px;
         border-radius: 100px;
+        box-shadow: 0px 5px 5px lightgrey;
         color: #fff;
         background: linear-gradient(to bottom right, #FF79DA, #9356DC);
         cursor: pointer;
@@ -504,6 +602,35 @@ body {
     }
     .desserts__choix3 {
         animation: menuchoix $anim-dur 1400ms both;
+    }
+    /*---Animation coeur aux clics---*/
+    .icone__legende .heart {
+        z-index: 1;
+        cursor: pointer;
+        position: relative;
+    }
+    .icone__legende .heart-color {
+        position: absolute;
+        right: 0px;
+        z-index: -1;
+        background: linear-gradient(0deg,#ff79da 0%, #d66cdb 35%,#ab5edc 70%, #9b59dc 100%); 
+        /*Un dégradé qui démarre du bas et va vers le haut qui commence au rose à 0% et fini au magenta à 100% avec 2 étapes à 35 et 70%*/
+        background-clip: text;
+        -webkit-background-clip: text; /*pas supporté par chrome donc obligé de passer par webkit*/
+        color: transparent;
+        opacity: 0;
+        transform: scale(0);
+        transition: 300ms ease-in-out;
+    }  
+    .heart:active .heart-color, .heart:focus .heart-color { /*A TRAVAILLER*/
+        transform: scale(1);
+        opacity: 1;
+    }
+    .heart:active, .heart:focus {
+        background: linear-gradient(0deg,#ff79da 0%, #d66cdb 35%,#ab5edc 70%, #9b59dc 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
     }
 }
 /*---Version Desktop---*/
