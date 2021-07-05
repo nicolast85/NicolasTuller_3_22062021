@@ -161,7 +161,7 @@ body {
         background-color: #fff;
         margin-bottom: 20px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 1fr;
         row-gap: 5px;
         padding-left: 15px;
         padding-top: 15px;
@@ -310,7 +310,7 @@ body {
     }
     .icone__legende {
         left: 320px;
-        top: 37px;
+        top: 35px;
         position: absolute;
     }
     .icone__legende .fas {
@@ -338,51 +338,58 @@ body {
     .entrees__choix1, .entrees__choix2, .entrees__choix3, .entrees__choix4,
     .plats__choix1, .plats__choix2, .plats__choix3,
     .desserts__choix1, .desserts__choix2, .desserts__choix3 {
-        padding: 15px;
+        padding: 13px;
         margin: 15px;
+        height: 58px;
         border-radius: 1.25rem;
         box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2%);
         background-color: #fff;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         cursor: pointer;
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
     }
     .entrees__choix1--titre, .entrees__choix2--titre, .entrees__choix3--titre, .entrees__choix4--titre,
     .plats__choix1--titre, .plats__choix2--titre, .plats__choix3--titre,
     .desserts__choix1--titre, .desserts__choix2--titre, .desserts__choix3--titre {
-        grid-column-start: 1;
-        grid-column: span 3;
-        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
     }
-    .entrees__choix1--indication, .entrees__choix2--indication, .entrees__choix3--indication, .entrees__choix4--indication,
-    .plats__choix1--indication, .plats__choix2--indication, .plats__choix3--indication,
-    .desserts__choix1--indication, .desserts__choix2--indication, .desserts__choix3--indication {
-        grid-column-start: 1;
-        grid-column: span 3;
-        font-size: 13px;
-        height: 20px;
-        margin-top: -10px;
-        white-space: nowrap;
+    .entrees__choix1--titre strong, .entrees__choix1--titre p,
+    .entrees__choix2--titre strong, .entrees__choix2--titre p,
+    .entrees__choix3--titre strong, .entrees__choix3--titre p,
+    .entrees__choix4--titre strong, .entrees__choix4--titre p,
+    .plats__choix1--titre strong, .plats__choix1--titre p,
+    .plats__choix2--titre strong, .plats__choix2--titre p,
+    .plats__choix3--titre strong, .plats__choix3--titre p,
+    .desserts__choix1--titre strong, .desserts__choix1--titre p, 
+    .desserts__choix2--titre strong, .desserts__choix2--titre p, 
+    .desserts__choix3--titre strong, .desserts__choix3--titre p {
         text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 5px;
     }
     .entrees__choix1--tarif, .entrees__choix2--tarif, .entrees__choix3--tarif, .entrees__choix4--tarif,
     .plats__choix1--tarif, .plats__choix2--tarif, .plats__choix3--tarif,
     .desserts__choix1--tarif, .desserts__choix2--tarif, .desserts__choix3--tarif {
-        grid-column-start: 4;
-        grid-row: 2;
-        padding-left: 50px;
-        padding-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;     
         font-weight: 700;
-        margin-top: -10px;
         white-space: nowrap;
         text-overflow: ellipsis;
+        padding-bottom: 5px;
     }
     /*---Animation choix menu---*/
-    @keyframes choix{
+    @keyframes valider{
         0% {
             opacity: 0;
         }
@@ -391,39 +398,47 @@ body {
             transform: translateX(-60px);
         }       
     }
-    @keyframes choix__icone {
+    @keyframes valider__icone{
         100% {
             transform: rotate(360deg);
         }
     }
-    @keyframes tarif {
+    @keyframes tarif{
         100% {
             transform: translateX(-60px);
         }
     }
-    .entrees__choix1:hover .choix, 
-    .entrees__choix2:hover .choix, 
-    .entrees__choix3:hover .choix, 
-    .entrees__choix4:hover .choix,
-    .plats__choix1:hover .choix,
-    .plats__choix2:hover .choix,
-    .plats__choix3:hover .choix,
-    .desserts__choix1:hover .choix,
-    .desserts__choix2:hover .choix,
-    .desserts__choix3:hover .choix {
-        animation: choix 700ms both;
+    .entrees__choix1 {  /*A TRAVAILLER*/
+        &:hover .entrees__choix1--titre {
+            width: 66%;
+        }
     }
-    .entrees__choix1:hover .choix__icone, 
-    .entrees__choix2:hover .choix__icone,
-    .entrees__choix3:hover .choix__icone, 
-    .entrees__choix4:hover .choix__icone,
-    .plats__choix1:hover .choix__icone,
-    .plats__choix2:hover .choix__icone,
-    .plats__choix3:hover .choix__icone,
-    .desserts__choix1:hover .choix__icone,
-    .desserts__choix2:hover .choix__icone,
-    .desserts__choix3:hover .choix__icone {
-        animation: choix__icone 700ms both;
+    .entrees__choix1--titre {
+        transition: width 700ms both;
+    }
+    .entrees__choix1:hover .valider, 
+    .entrees__choix2:hover .valider, 
+    .entrees__choix3:hover .valider, 
+    .entrees__choix4:hover .valider,
+    .plats__choix1:hover .valider,
+    .plats__choix2:hover .valider,
+    .plats__choix3:hover .valider,
+    .desserts__choix1:hover .valider,
+    .desserts__choix2:hover .valider,
+    .desserts__choix3:hover .valider {
+        animation: valider 700ms both;
+    }
+    .entrees__choix1:hover .valider__icone, 
+    .entrees__choix2:hover .valider__icone,
+    .entrees__choix3:hover .valider__icone, 
+    .entrees__choix4:hover .valider__icone,
+    .plats__choix1:hover .valider__icone,
+    .plats__choix2:hover .valider__icone,
+    .plats__choix3:hover .valider__icone,
+    .desserts__choix1:hover .valider__icone,
+    .desserts__choix2:hover .valider__icone,
+    .desserts__choix3:hover .valider__icone {
+        animation: valider__icone 700ms both;
     }
     .entrees__choix1:hover .entrees__choix1--tarif, 
     .entrees__choix2:hover .entrees__choix2--tarif,
@@ -437,20 +452,17 @@ body {
     .desserts__choix3:hover .desserts__choix3--tarif {
         animation: tarif 700ms both;
     }
-    .choix {
-        grid-column-start: 4;
-        grid-row: 2;
+    .valider {
         background-color: #99E2D0;
-        margin: -2.2rem -5rem -1rem 1rem;
+        margin: -1rem -5rem -1rem 1rem;
         width: 4rem;
         border-radius: 0 1.25rem 1.25rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
         opacity: 0;
-        margin-left: 90px;
     }
-    .choix__icone {
+    .valider__icone {
         height: 1.6rem;
         width: 1.6rem;
         background-color: #fff;
@@ -459,7 +471,7 @@ body {
         justify-content: center;
         border-radius: 100px;
     }
-    .choix__icone .far {
+    .valider__icone .far {
         color: #99E2D0;
         font-size: 200%;
     }
@@ -608,6 +620,7 @@ body {
         z-index: 1;
         cursor: pointer;
         position: relative;
+        font-size: 150%;
     }
     .icone__legende .heart-color {
         position: absolute;
@@ -622,11 +635,11 @@ body {
         transform: scale(0);
         transition: 300ms ease-in-out;
     }  
-    .heart:active .heart-color, .heart:focus .heart-color { /*A TRAVAILLER*/
+    .heart:hover .heart-color {
         transform: scale(1);
         opacity: 1;
     }
-    .heart:active, .heart:focus {
+    .heart:hover {
         background: linear-gradient(0deg,#ff79da 0%, #d66cdb 35%,#ab5edc 70%, #9b59dc 100%);
         background-clip: text;
         -webkit-background-clip: text;
