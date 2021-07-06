@@ -6,24 +6,35 @@ body {
 @media (min-width: 300px) {
     #bloc_page {
         width: auto;
-    }   
+    }
+    /*Variable des couleurs*/
+    $Couleur_primaire: #9356DC;
+    $Couleur_secondaire: #FF79DA;
+    $Couleur_tertiaire: #99E2D0;
+    $Couleur_quaternaire: #f6f6f6;
+    $Couleur_quinaire: #fff;
+    $Couleur_senaire: #000;
+
+    /*Logo page d'accueil*/  
     .logo__main {
         height: 45px;
         padding-top: 20px;
         text-align: center;
         box-shadow: 0 0 0.5rem #c1c1bd;
-        position: relative;
+        position: relative; /*Permet d'afficher la bordure ombrée au dessus du background gris de localisation*/
     }
+    /*logo pages restaurants*/
     .logo__mainb {
         text-align: center;
         padding-top: 20px;
         padding-right: 70px;
         column-gap: 30px;
     }
+    /*Flêche de retour à la page d'accueil*/
     .logo__mainb a {
         text-decoration: none;
         padding-right: 70px;
-        position: absolute;
+        position: absolute; /*Permet de placer la flèche*/
         left: 2rem;
         top: 1.5rem;
     }
@@ -33,6 +44,7 @@ body {
     .logo, .logob {
         width: 50%;
     }
+    /*Champ de saisie de localisation*/
     .localisation {
         display: flex;
         flex-direction: row;
@@ -46,16 +58,16 @@ body {
         background: none;
         text-align: center;
         font-weight: bold;
-        color: black;
+        color: $Couleur_senaire;
         width: 45%;
     }
-    .localisation input::placeholder {
-        color: black;
+    .localisation input::placeholder { /*Affiche par défaut un texte*/
+        color: $Couleur_senaire;
     }
     .decouverte {
         padding: 2rem;
         text-align: center;
-        background-color: #f6f6f6;
+        background-color: $Couleur_quaternaire;
     }
     .decouverte h2 {
         margin: 0;
@@ -83,8 +95,8 @@ body {
         font-size: 15px;
         border-radius: 100px;
         box-shadow: 0px 5px 5px lightgrey;
-        color: #fff;
-        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+        color: $Couleur_quinaire;
+        background: linear-gradient(to bottom right, $Couleur_secondaire, $Couleur_primaire);
         cursor: pointer;
         margin-top: 30px;
         margin-bottom: 50px;
@@ -103,7 +115,7 @@ body {
         margin: 1rem 0 1rem 0.75rem;
         border-radius: 1.25rem;
         box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.12);
-        background-color: #f6f6f6;
+        background-color: $Couleur_quaternaire;
         display: flex;
         column-gap: 30px;
     }
@@ -116,7 +128,7 @@ body {
     .fonctionnement__choix:hover .fas,
     .fonctionnement__composition:hover .fas, 
     .fonctionnement__degustation:hover .fas {
-        color: #9356DC;
+        color: $Couleur_primaire;
     }
     .fonctionnement__choix .fas, 
     .fonctionnement__composition .fas, 
@@ -125,8 +137,8 @@ body {
     }
     .numero {
         border-radius: 50%;
-        background-color: #9356DC;
-        color: #fff;
+        background-color: $Couleur_primaire;
+        color: $Couleur_quinaire;
         position: relative;
         width: 20px;
         height: 20px;
@@ -137,7 +149,7 @@ body {
         font-weight: bold;
     }
     .restaurant {
-        background-color: #f6f6f6;
+        background-color: $Couleur_quaternaire;
         margin-top: 60px;
         padding-top: 30px;
         padding-bottom: 40px;
@@ -154,11 +166,11 @@ body {
     }
     .carte a {
         text-decoration: none;
-        color: black;
+        color: $Couleur_senaire;
     }
     .carte__legende {
         border-radius: 0px 0px 15px 15px;
-        background-color: #fff;
+        background-color: $Couleur_quinaire;
         margin-bottom: 20px;
         display: grid;
         grid-template-columns: 3fr 1fr;
@@ -191,7 +203,7 @@ body {
         position: absolute;
     }
     .nouveau {
-        background-color: #99e2d0;
+        background-color: $Couleur_tertiaire;
         color: #1b6150;
         position: absolute;
         top: 10px;
@@ -233,7 +245,7 @@ body {
         margin-top: -60px;
     }
     footer h2 {
-        color: #fff;
+        color: $Couleur_quinaire;
         font-family: 'Shrikhand';
         font-size: 1.2rem;
         margin-bottom: 8px;
@@ -246,7 +258,7 @@ body {
     }
     nav a {
         text-decoration: none;
-        color: #fff;
+        color: $Couleur_quinaire;
         margin-left: 25px;
     }
     .icone__proposition, .icone__partenaire {
@@ -291,7 +303,7 @@ body {
         height: 300px;
     }
     .menu {
-        background-color: #f6f6f6;
+        background-color: $Couleur_quaternaire;
         border-radius: 40px 40px 0px 0px;
         position: relative;
         top: -40px;
@@ -326,7 +338,7 @@ body {
         width: 32px;
         height: 3px;
         border-style: none;
-        background-color: #99E2D0;
+        background-color: $Couleur_tertiaire;
         position: relative;
         right: 40.5%;
         margin-top: -10px;
@@ -343,7 +355,7 @@ body {
         height: 58px;
         border-radius: 1.25rem;
         box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2%);
-        background-color: #fff;
+        background-color: $Couleur_quinaire;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -418,7 +430,7 @@ body {
             margin-right: 60px;
         }   
     }
-
+    /*Durée animation choix menu*/
     $anim-dur_menu: 700ms;
 
     .entrees__choix1:hover .entrees__choix1--titre,
@@ -470,7 +482,7 @@ body {
         animation: tarif $anim-dur_menu both;
     }
     .valider {
-        background-color: #99E2D0;
+        background-color: $Couleur_tertiaire;
         margin: -1rem -5rem -1rem 1rem;
         width: 4rem;
         border-radius: 0 1.25rem 1.25rem 0;
@@ -482,14 +494,14 @@ body {
     .valider__icone {
         height: 1.6rem;
         width: 1.6rem;
-        background-color: #fff;
+        background-color: $Couleur_quinaire;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 100px;
     }
     .valider__icone .far {
-        color: #99E2D0;
+        color: $Couleur_tertiaire;
         font-size: 200%;
     }
     .commande__bouton {
@@ -509,8 +521,8 @@ body {
         font-size: 15px;
         border-radius: 100px;
         box-shadow: 0px 5px 5px lightgrey;
-        color: #fff;
-        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+        color: $Couleur_quinaire;
+        background: linear-gradient(to bottom right, $Couleur_secondaire, $Couleur_primaire);
         cursor: pointer;
         margin-top: 30px;
         margin-bottom: 70px;
@@ -518,7 +530,7 @@ body {
     }
     /*Style des icones*/
     .localisation .fas {
-        color: black;
+        color: $Couleur_senaire;
     }
     .fonctionnement__choix .fas, 
     .fonctionnement__composition .fas, 
@@ -535,7 +547,7 @@ body {
         font-size: 70%;
     }
     .logo__mainb .fas {
-        color: black;
+        color: $Couleur_senaire;
     }
     /*--------------------------------*/
     /*----------Animations------------*/
@@ -570,15 +582,15 @@ body {
         column-gap: 30px;
     }
     .loadingspinner__icone--1 .fas {
-        color: #9356DC;
+        color: $Couleur_primaire;
         font-size: 300%;
     }
     .loadingspinner__icone--2 .fas {
-        color: #FF79DA;
+        color: $Couleur_secondaire;
         font-size: 300%;
     }
     .loadingspinner__icone--3 .fas {
-        color: #99E2D0;
+        color: $Couleur_tertiaire;
         font-size: 300%;   
     }
     /*---Animation des menus---*/
@@ -643,7 +655,7 @@ body {
         position: absolute;
         right: 0px;
         z-index: -1;
-        background: linear-gradient(0deg,#ff79da 0%, #d66cdb 35%,#ab5edc 70%, #9b59dc 100%); 
+        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%); 
         /*Un dégradé qui démarre du bas et va vers le haut qui commence au rose à 0% et fini au magenta à 100% avec 2 étapes à 35 et 70%*/
         background-clip: text;
         -webkit-background-clip: text; /*pas supporté par chrome donc obligé de passer par webkit*/
@@ -657,7 +669,7 @@ body {
         opacity: 1;
     }
     .heart:hover {
-        background: linear-gradient(0deg,#ff79da 0%, #d66cdb 35%,#ab5edc 70%, #9b59dc 100%);
+        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -689,7 +701,7 @@ body {
         justify-content: flex-end;
         position: absolute;
         z-index: -1;
-        background: linear-gradient(0deg,#ff79da 0%, #d66cdb 35%,#ab5edc 70%, #9b59dc 100%); 
+        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%); 
         /*Un dégradé qui démarre du bas et va vers le haut qui commence au rose à 0% et fini au magenta à 100% avec 2 étapes à 35 et 70%*/
         background-clip: text;
         -webkit-background-clip: text; /*pas supporté par chrome donc obligé de passer par webkit*/
@@ -703,7 +715,7 @@ body {
         opacity: 1;
     }
     .heart:hover {
-        background: linear-gradient(0deg,#ff79da 0%, #d66cdb 35%,#ab5edc 70%, #9b59dc 100%);
+        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -727,7 +739,7 @@ body {
         position: absolute;
         right: 0px;
         z-index: -1;
-        background: linear-gradient(0deg,#ff79da 0%, #d66cdb 35%,#ab5edc 70%, #9b59dc 100%); 
+        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%); 
         /*Un dégradé qui démarre du bas et va vers le haut qui commence au rose à 0% et fini au magenta à 100% avec 2 étapes à 35 et 70%*/
         background-clip: text;
         -webkit-background-clip: text; /*pas supporté par chrome donc obligé de passer par webkit*/

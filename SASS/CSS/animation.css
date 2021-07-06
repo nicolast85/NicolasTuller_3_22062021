@@ -9,6 +9,8 @@ body {
   #bloc_page {
     width: auto;
   }
+  /*Variable des couleurs*/
+  /*Logo page d'accueil*/
   .logo__main {
     height: 45px;
     padding-top: 20px;
@@ -16,7 +18,9 @@ body {
     -webkit-box-shadow: 0 0 0.5rem #c1c1bd;
             box-shadow: 0 0 0.5rem #c1c1bd;
     position: relative;
+    /*Permet d'afficher la bordure ombrée au dessus du background gris de localisation*/
   }
+  /*logo pages restaurants*/
   .logo__mainb {
     text-align: center;
     padding-top: 20px;
@@ -24,10 +28,12 @@ body {
     -webkit-column-gap: 30px;
             column-gap: 30px;
   }
+  /*Flêche de retour à la page d'accueil*/
   .logo__mainb a {
     text-decoration: none;
     padding-right: 70px;
     position: absolute;
+    /*Permet de placer la flèche*/
     left: 2rem;
     top: 1.5rem;
   }
@@ -37,6 +43,7 @@ body {
   .logo, .logob {
     width: 50%;
   }
+  /*Champ de saisie de localisation*/
   .localisation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -61,15 +68,19 @@ body {
     width: 45%;
   }
   .localisation input::-webkit-input-placeholder {
+    /*Affiche par défaut un texte*/
     color: black;
   }
   .localisation input:-ms-input-placeholder {
+    /*Affiche par défaut un texte*/
     color: black;
   }
   .localisation input::-ms-input-placeholder {
+    /*Affiche par défaut un texte*/
     color: black;
   }
   .localisation input::placeholder {
+    /*Affiche par défaut un texte*/
     color: black;
   }
   .decouverte {
@@ -521,6 +532,7 @@ body {
       margin-right: 60px;
     }
   }
+  /*Durée animation choix menu*/
   .entrees__choix1:hover .entrees__choix1--titre,
   .entrees__choix2:hover .entrees__choix2--titre,
   .entrees__choix3:hover .entrees__choix3--titre,
