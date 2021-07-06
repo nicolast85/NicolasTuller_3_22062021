@@ -388,7 +388,9 @@ body {
         text-overflow: ellipsis;
         padding-bottom: 5px;
     }
+    /*--------------------------*/
     /*---Animation choix menu---*/
+    /*--------------------------*/
     @keyframes valider{
         0% {
             opacity: 0;
@@ -408,13 +410,28 @@ body {
             transform: translateX(-60px);
         }
     }
-    .entrees__choix1 {  /*A TRAVAILLER*/
-        &:hover .entrees__choix1--titre {
-            width: 66%;
+    @keyframes indication{
+        0% {
+            margin-right: 0px;
         }
+        100% {
+            margin-right: 60px;
+        }   
     }
-    .entrees__choix1--titre {
-        transition: width 700ms both;
+
+    $anim-dur_menu: 700ms;
+
+    .entrees__choix1:hover .entrees__choix1--titre,
+    .entrees__choix2:hover .entrees__choix2--titre,
+    .entrees__choix3:hover .entrees__choix3--titre,
+    .entrees__choix4:hover .entrees__choix4--titre,
+    .plats__choix1:hover .plats__choix1--titre,
+    .plats__choix2:hover .plats__choix2--titre,
+    .plats__choix3:hover .plats__choix3--titre,
+    .desserts__choix1:hover .desserts__choix1--titre,
+    .desserts__choix2:hover .desserts__choix2--titre,
+    .desserts__choix3:hover .desserts__choix3--titre {
+        animation: indication $anim-dur_menu both;
     }
     .entrees__choix1:hover .valider, 
     .entrees__choix2:hover .valider, 
@@ -426,7 +443,7 @@ body {
     .desserts__choix1:hover .valider,
     .desserts__choix2:hover .valider,
     .desserts__choix3:hover .valider {
-        animation: valider 700ms both;
+        animation: valider $anim-dur_menu both;
     }
     .entrees__choix1:hover .valider__icone, 
     .entrees__choix2:hover .valider__icone,
@@ -438,7 +455,7 @@ body {
     .desserts__choix1:hover .valider__icone,
     .desserts__choix2:hover .valider__icone,
     .desserts__choix3:hover .valider__icone {
-        animation: valider__icone 700ms both;
+        animation: valider__icone $anim-dur_menu both;
     }
     .entrees__choix1:hover .entrees__choix1--tarif, 
     .entrees__choix2:hover .entrees__choix2--tarif,
@@ -450,7 +467,7 @@ body {
     .desserts__choix1:hover .desserts__choix1--tarif,
     .desserts__choix2:hover .desserts__choix2--tarif,
     .desserts__choix3:hover .desserts__choix3--tarif {
-        animation: tarif 700ms both;
+        animation: tarif $anim-dur_menu both;
     }
     .valider {
         background-color: #99E2D0;
