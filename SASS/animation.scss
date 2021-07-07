@@ -64,28 +64,27 @@ body {
     .localisation input::placeholder { /*Affiche par défaut un texte*/
         color: $Couleur_senaire;
     }
+    /*Zone slogan + bouton explorer*/
     .decouverte {
         padding: 2rem;
         text-align: center;
         background-color: $Couleur_quaternaire;
     }
+    /*Slogan*/
     .decouverte h2 {
         margin: 0;
         font-size: 1.5rem;
         font-weight: bold;
     }
+    /*Sous-titre*/
     .decouverte p {
         font-weight: 300;
-        margin: 1.5rem 0;
+        margin: 1.5rem 0; /*marge top/bot=1.5 marge left/right=0*/
     }
+    /*Bouton Explorer nos restaurants*/
     .decouverte__bouton {
         display: flex;
         justify-content: center;
-    }
-    .decouverte__bouton:hover input {
-        transition-duration: 1000ms;
-        opacity: 0.80;
-        box-shadow: 0px 10px 5px lightgrey;
     }
     .decouverte__bouton input {
         text-decoration: none;
@@ -96,17 +95,23 @@ body {
         border-radius: 100px;
         box-shadow: 0px 5px 5px lightgrey;
         color: $Couleur_quinaire;
-        background: linear-gradient(to bottom right, $Couleur_secondaire, $Couleur_primaire);
+        background: linear-gradient(to bottom right, $Couleur_secondaire, $Couleur_primaire);/*dégradé*/
         cursor: pointer;
         margin-top: 30px;
         margin-bottom: 50px;
     }
+    .decouverte__bouton:hover input {
+        transition-duration: 1000ms;            /*Animation au survol*/
+        opacity: 0.80;                          /*S'éclaire*/
+        box-shadow: 0px 10px 5px lightgrey;   /*Ombre portée légèrement plus visisble*/
+    }
+    /*Menu Fonctionnement*/
     .fonctionnement h1 {
         margin-left: 30px;
         margin-top: 40px;
     }
     .fonctionnement__menu {
-        list-style: none;
+        list-style: none;/*Enlève les li*/
         padding-left: 30px;
         margin-right: 20px;  
     }
@@ -122,32 +127,35 @@ body {
     .fonctionnement__choix:hover,
     .fonctionnement__composition:hover, 
     .fonctionnement__degustation:hover {
-        background-color: #f5edff;
+        background-color: #f5edff;     /*Devient plus foncé et ombres plus marquées au survol*/
         box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     }
     .fonctionnement__choix:hover .fas,
     .fonctionnement__composition:hover .fas, 
     .fonctionnement__degustation:hover .fas {
-        color: $Couleur_primaire;
+        color: $Couleur_primaire;  /*Change l'icone de couleur au survol*/
     }
     .fonctionnement__choix .fas, 
     .fonctionnement__composition .fas, 
     .fonctionnement__degustation .fas {
         margin-left: -40px;
     }
+    /*Balise numérotée 1 à 3*/
     .numero {
         border-radius: 50%;
         background-color: $Couleur_primaire;
         color: $Couleur_quinaire;
-        position: relative;
+        position: relative;  /*Placement*/
         width: 20px;
         height: 20px;
         right: 35px;
         text-align: center;
     }
+    /*Texte du menu*/
     .choix {
         font-weight: bold;
     }
+    /*Section des Restaurants*/
     .restaurant {
         background-color: $Couleur_quaternaire;
         margin-top: 60px;
@@ -158,11 +166,12 @@ body {
     .restaurant h1 {
         padding-left: 20px;
     }
+    /*Carte des restaurants*/
     .carte {
         border-radius: 15px;
         margin-left: 20px;
         margin-right: 20px;
-        position: relative;
+        position: relative; /*Permet le placement du stickers "Nouveau"*/
     }
     .carte a {
         text-decoration: none;
@@ -192,26 +201,21 @@ body {
         grid-column-start: 2;
         grid-row: span 2;
         padding-top: 10px;
-    }
-    .carte_icone .far {
         display: flex;
         justify-content: flex-end;
-        padding-right: 20px;
     }
-    .carte_icone .fas {
-        opacity: 0;
-        position: absolute;
-    }
+    /*Stickers*/
     .nouveau {
         background-color: $Couleur_tertiaire;
         color: #1b6150;
-        position: absolute;
+        position: absolute; /*Permet le placement du stickers sur une carte*/
         top: 10px;
         right: 10px;
         padding: 7px;
         border-radius: 2px;
         font-weight: bold;
     }
+    /*Mise en page des images des cartes*/
     .la_palette_du_gout {
         background-image: url("../../images/photos/la_palette_du_gout.jpg");
         background-size: cover;
@@ -240,6 +244,9 @@ body {
         background-position: center;
         height: 180px;
     }
+    /*------------*/
+    /*---Footer---*/
+    /*------------*/
     footer {
         background-color: #353535;
         margin-top: -60px;
@@ -251,7 +258,7 @@ body {
         margin-bottom: 8px;
         margin-left: 25px;
         padding-top: 30px;
-        font-weight: normal;
+        font-weight: normal; /*Gras plus fin*/
     }
     nav {
         padding-bottom: 20px;
@@ -273,7 +280,7 @@ body {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    /*Mise en page photo page restaurant*/
+    /*Mise en page photo des pages restaurants*/
     .photo_a_la_francaise {
         background-image: url("../../images/photos/a_la_francaise.jpg");
         background-size: cover;
@@ -302,12 +309,14 @@ body {
         margin-top: 10px;
         height: 300px;
     }
+    /*Menu des restaurants*/
     .menu {
         background-color: $Couleur_quaternaire;
         border-radius: 40px 40px 0px 0px;
-        position: relative;
+        position: relative; /*Superpose sur la photo du restaurant en haut*/
         top: -40px;
     }
+    /*Nom du restaurant + icone coeur*/
     .legende {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -325,15 +334,13 @@ body {
         top: 35px;
         position: absolute;
     }
-    .icone__legende .fas {
-        opacity: 0;
-        position: absolute;
-    }
+    /*Différents type de plats*/
     .entrees h3, .plats h3, .desserts h3 {
         padding-left: 20px;
         font-size: 13px;
         font-weight: 400;
     }
+    /*Barre verte : élément de rupture thématique*/
     hr {
         width: 32px;
         height: 3px;
@@ -347,6 +354,7 @@ body {
         margin-top: 50px;
         margin-bottom: 50px;
     }
+    /*Choix de plats*/
     .entrees__choix1, .entrees__choix2, .entrees__choix3, .entrees__choix4,
     .plats__choix1, .plats__choix2, .plats__choix3,
     .desserts__choix1, .desserts__choix2, .desserts__choix3 {
@@ -360,20 +368,22 @@ body {
         flex-direction: row;
         justify-content: space-between;
         cursor: pointer;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        white-space: nowrap;    /*Pas de retour à la ligne*/
+        text-overflow: ellipsis;/*Met des "..." si le texte dépasse de la zone textuelle*/
+        overflow: hidden;       /*Cache contenue qui sort de la zone de son bloc*/
     }
+    /*Zone des intitulés des plats*/
     .entrees__choix1--titre, .entrees__choix2--titre, .entrees__choix3--titre, .entrees__choix4--titre,
     .plats__choix1--titre, .plats__choix2--titre, .plats__choix3--titre,
     .desserts__choix1--titre, .desserts__choix2--titre, .desserts__choix3--titre {
         display: flex;
         flex-direction: column;
         width: 85%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        white-space: nowrap;    /*Pas de retour à la ligne*/
+        text-overflow: ellipsis;/*Met des "..." si le texte dépasse de la zone textuelle*/
+        overflow: hidden;       /*Cache contenue qui sort de la zone de son bloc*/
     }
+    /*Intitulés des plats*/
     .entrees__choix1--titre strong, .entrees__choix1--titre p,
     .entrees__choix2--titre strong, .entrees__choix2--titre p,
     .entrees__choix3--titre strong, .entrees__choix3--titre p,
@@ -384,11 +394,12 @@ body {
     .desserts__choix1--titre strong, .desserts__choix1--titre p, 
     .desserts__choix2--titre strong, .desserts__choix2--titre p, 
     .desserts__choix3--titre strong, .desserts__choix3--titre p {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+        text-overflow: ellipsis;/*Met des "..." si le texte dépasse de la zone textuelle*/
+        white-space: nowrap;    /*Pas de retour à la ligne*/
+        overflow: hidden;       /*Cache contenue qui sort de la zone de son bloc*/
         margin: 5px;
     }
+    /*Tarifs des plats*/
     .entrees__choix1--tarif, .entrees__choix2--tarif, .entrees__choix3--tarif, .entrees__choix4--tarif,
     .plats__choix1--tarif, .plats__choix2--tarif, .plats__choix3--tarif,
     .desserts__choix1--tarif, .desserts__choix2--tarif, .desserts__choix3--tarif {
@@ -396,91 +407,11 @@ body {
         justify-content: flex-end;
         align-items: flex-end;     
         font-weight: 700;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        white-space: nowrap;    /*Pas de retour à la ligne*/
+        text-overflow: ellipsis;/*Met des "..." si le texte dépasse de la zone textuelle*/
         padding-bottom: 5px;
     }
-    /*--------------------------*/
-    /*---Animation choix menu---*/
-    /*--------------------------*/
-    @keyframes valider{
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(-60px);
-        }       
-    }
-    @keyframes valider__icone{
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-    @keyframes tarif{
-        100% {
-            transform: translateX(-60px);
-        }
-    }
-    @keyframes indication{
-        0% {
-            margin-right: 0px;
-        }
-        100% {
-            margin-right: 60px;
-        }   
-    }
-    /*Durée animation choix menu*/
-    $anim-dur_menu: 700ms;
-
-    .entrees__choix1:hover .entrees__choix1--titre,
-    .entrees__choix2:hover .entrees__choix2--titre,
-    .entrees__choix3:hover .entrees__choix3--titre,
-    .entrees__choix4:hover .entrees__choix4--titre,
-    .plats__choix1:hover .plats__choix1--titre,
-    .plats__choix2:hover .plats__choix2--titre,
-    .plats__choix3:hover .plats__choix3--titre,
-    .desserts__choix1:hover .desserts__choix1--titre,
-    .desserts__choix2:hover .desserts__choix2--titre,
-    .desserts__choix3:hover .desserts__choix3--titre {
-        animation: indication $anim-dur_menu both;
-    }
-    .entrees__choix1:hover .valider, 
-    .entrees__choix2:hover .valider, 
-    .entrees__choix3:hover .valider, 
-    .entrees__choix4:hover .valider,
-    .plats__choix1:hover .valider,
-    .plats__choix2:hover .valider,
-    .plats__choix3:hover .valider,
-    .desserts__choix1:hover .valider,
-    .desserts__choix2:hover .valider,
-    .desserts__choix3:hover .valider {
-        animation: valider $anim-dur_menu both;
-    }
-    .entrees__choix1:hover .valider__icone, 
-    .entrees__choix2:hover .valider__icone,
-    .entrees__choix3:hover .valider__icone, 
-    .entrees__choix4:hover .valider__icone,
-    .plats__choix1:hover .valider__icone,
-    .plats__choix2:hover .valider__icone,
-    .plats__choix3:hover .valider__icone,
-    .desserts__choix1:hover .valider__icone,
-    .desserts__choix2:hover .valider__icone,
-    .desserts__choix3:hover .valider__icone {
-        animation: valider__icone $anim-dur_menu both;
-    }
-    .entrees__choix1:hover .entrees__choix1--tarif, 
-    .entrees__choix2:hover .entrees__choix2--tarif,
-    .entrees__choix3:hover .entrees__choix3--tarif, 
-    .entrees__choix4:hover .entrees__choix4--tarif,
-    .plats__choix1:hover .plats__choix1--tarif,
-    .plats__choix2:hover .plats__choix2--tarif,
-    .plats__choix3:hover .plats__choix3--tarif,
-    .desserts__choix1:hover .desserts__choix1--tarif,
-    .desserts__choix2:hover .desserts__choix2--tarif,
-    .desserts__choix3:hover .desserts__choix3--tarif {
-        animation: tarif $anim-dur_menu both;
-    }
+    /*Coche de validation caché*/
     .valider {
         background-color: $Couleur_tertiaire;
         margin: -1rem -5rem -1rem 1rem;
@@ -491,6 +422,7 @@ body {
         justify-content: center;
         opacity: 0;
     }
+    /*Zone de l'icone de la coche de validation*/
     .valider__icone {
         height: 1.6rem;
         width: 1.6rem;
@@ -500,18 +432,15 @@ body {
         justify-content: center;
         border-radius: 100px;
     }
+    /*Icone de validation*/
     .valider__icone .far {
         color: $Couleur_tertiaire;
         font-size: 200%;
     }
+    /*Bouton commander*/
     .commande__bouton {
         display: flex;
         justify-content: center;
-    }
-    .commande__bouton:hover input {
-        transition-duration: 1000ms;
-        opacity: 0.80;
-        box-shadow: 0px 10px 5px lightgrey;
     }
     .commande__bouton input {
         text-decoration: none;
@@ -528,24 +457,32 @@ body {
         margin-bottom: 70px;
         width: 170px;
     }
-    /*Style des icones*/
+    .commande__bouton:hover input {
+        transition-duration: 1000ms;            /*Animation au survol*/
+        opacity: 0.80;                          /*S'éclaire*/
+        box-shadow: 0px 10px 5px lightgrey;   /*Ombre portée légèrement plus visisble*/
+    }
+    /*----------------------*/
+    /*---Style des icones---*/
+    /*----------------------*/
+    /*Icone Localisation*/
     .localisation .fas {
         color: $Couleur_senaire;
     }
+    /*Icones du menu Fonctionnement*/
     .fonctionnement__choix .fas, 
     .fonctionnement__composition .fas, 
     .fonctionnement__degustation .fas {
         color: #7e7e7e;
     }
-    .carte_icone .far {
-        font-size: 150%;
-    }
+    /*Icones du footer*/
     .icone__proposition .fas {
         font-size: 105%;
     }
     .icone__partenaire .fas {
         font-size: 70%;
     }
+    /*Icone flèche retour en arrière des pages de restaurant*/
     .logo__mainb .fas {
         color: $Couleur_senaire;
     }
@@ -553,7 +490,10 @@ body {
     /*----------Animations------------*/
     /*--------------------------------*/
     /*---*/
+    /*------------------------------*/
     /*---Animation page d'accueil---*/
+    /*------------------------------*/
+    /*Fait apparaitre un loadingspinner puis le fait disparaitre au chargement de la page d'accueil*/
     @keyframes loadingspinner{
         0% {
             opacity: 1;
@@ -563,19 +503,20 @@ body {
             z-index: -10;
         }
     }
+    /*Loader*/
     .loadingspinner {
-        width: 100%;
+        width: 100%;  /*Couvre toute la page*/
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: fixed;
+        position: fixed; /*Permet le placement au centre de la page*/
         background-color: hsla(0,0%,100%,.9); /*hsla(hue, saturation, lightness, alpha)*/
-        animation: loadingspinner 1500ms;
-        animation-delay: 1000ms;
-        animation-fill-mode: both;
         z-index: 999; /*positionnement au 1er plan*/
+        animation: loadingspinner 1500ms 1000ms both;/*Application de la keyframe au chargement de la page d'accueil*/
+                   /*nom keyframe durée  délai  extention propiété*/
     }
+    /*Icones du loader*/
     .loadingspinner__icone {
         display: flex;
         justify-content: space-between;
@@ -593,7 +534,10 @@ body {
         color: $Couleur_tertiaire;
         font-size: 300%;   
     }
+    /*-------------------------*/
     /*---Animation des menus---*/
+    /*-------------------------*/
+    /*Fait apparaitre les choix des plats et les fait monter légèrement au chargement de la page d'un restaurant*/
     @keyframes menuchoix{
         0% {
             opacity: 0;
@@ -610,11 +554,12 @@ body {
             transform: translateY(0);
         }      
     }
-
+    /*Variable durée animation des choix de plats*/
     $anim-dur: 1500ms;
 
+    /*Application de la keyframe au chargement d'une page de restaurant'*/
     .entrees__choix1 {
-        /*---------nom_______durée_____delay_fill-mode*/
+                   /*nom_____durée_____delay_fill-mode*/
         animation: menuchoix $anim-dur 500ms both;
     }
     .entrees__choix2 {
@@ -644,32 +589,152 @@ body {
     .desserts__choix3 {
         animation: menuchoix $anim-dur 1400ms both;
     }
-    /*---Animation coeur aux clics---*/
-    .icone__legende .heart {
-        z-index: 1;
+    /*--------------------------------*/
+    /*---Animation choix coche menu---*/
+    /*--------------------------------*/
+    /*Fait apparaitre la coche de validation et la fait bouger de gauche à droite*/
+    @keyframes valider{
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(-60px);
+        }       
+    }
+    /*Fait pivoter l'icone de la coche de validation*/
+    @keyframes valider__icone{
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    /*Fait bouger de gauche à droite le tarif*/
+    @keyframes tarif{
+        100% {
+            transform: translateX(-60px);
+        }
+    }
+    /*Réduit la zone des intitulés de plats par la droite*/
+    @keyframes indication{
+        0% {
+            margin-right: 0px;
+        }
+        100% {
+            margin-right: 60px;
+        }   
+    }
+    /*Variable durée animation choix menu*/
+    $anim-dur_menu: 700ms;
+
+    /*Application de la keyframe sur la zone de intitulé des plats au survol des choix du menu*/
+    .entrees__choix1:hover .entrees__choix1--titre,
+    .entrees__choix2:hover .entrees__choix2--titre,
+    .entrees__choix3:hover .entrees__choix3--titre,
+    .entrees__choix4:hover .entrees__choix4--titre,
+    .plats__choix1:hover .plats__choix1--titre,
+    .plats__choix2:hover .plats__choix2--titre,
+    .plats__choix3:hover .plats__choix3--titre,
+    .desserts__choix1:hover .desserts__choix1--titre,
+    .desserts__choix2:hover .desserts__choix2--titre,
+    .desserts__choix3:hover .desserts__choix3--titre {
+                  /*nom keyframe  durée*/
+        animation: indication $anim-dur_menu both; /*both: permet d'étendre la propriétéde la keyframe*/
+    }
+    /*Application de la keyframe sur la coche au survol des choix du menu*/
+    .entrees__choix1:hover .valider, 
+    .entrees__choix2:hover .valider, 
+    .entrees__choix3:hover .valider, 
+    .entrees__choix4:hover .valider,
+    .plats__choix1:hover .valider,
+    .plats__choix2:hover .valider,
+    .plats__choix3:hover .valider,
+    .desserts__choix1:hover .valider,
+    .desserts__choix2:hover .valider,
+    .desserts__choix3:hover .valider {
+        animation: valider $anim-dur_menu both;
+    }
+    /*Application de la keyframe sur l'icone de la coche au survol des choix du menu*/
+    .entrees__choix1:hover .valider__icone, 
+    .entrees__choix2:hover .valider__icone,
+    .entrees__choix3:hover .valider__icone, 
+    .entrees__choix4:hover .valider__icone,
+    .plats__choix1:hover .valider__icone,
+    .plats__choix2:hover .valider__icone,
+    .plats__choix3:hover .valider__icone,
+    .desserts__choix1:hover .valider__icone,
+    .desserts__choix2:hover .valider__icone,
+    .desserts__choix3:hover .valider__icone {
+        animation: valider__icone $anim-dur_menu both;
+    }
+    /*Application de la keyframe sur les tarifs au survol des choix du menu*/
+    .entrees__choix1:hover .entrees__choix1--tarif, 
+    .entrees__choix2:hover .entrees__choix2--tarif,
+    .entrees__choix3:hover .entrees__choix3--tarif, 
+    .entrees__choix4:hover .entrees__choix4--tarif,
+    .plats__choix1:hover .plats__choix1--tarif,
+    .plats__choix2:hover .plats__choix2--tarif,
+    .plats__choix3:hover .plats__choix3--tarif,
+    .desserts__choix1:hover .desserts__choix1--tarif,
+    .desserts__choix2:hover .desserts__choix2--tarif,
+    .desserts__choix3:hover .desserts__choix3--tarif {
+        animation: tarif $anim-dur_menu both;
+    }
+    /*---Animation coeur au survol---*/
+    /*Coeur page d'accueil*/
+    .carte_icone .heart {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        width: 24px;
+        font-size: 150%;
+        z-index: 1; /*Icone coeur vide au 1er plan*/
         cursor: pointer;
         position: relative;
-        font-size: 150%;
     }
-    .icone__legende .heart-color {
+    /*Icone coeur "plein" caché & transition*/
+    .carte_icone .heart-color {
+        display: flex;
+        justify-content: flex-end;
         position: absolute;
-        right: 0px;
-        z-index: -1;
-        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%); 
-        /*Un dégradé qui démarre du bas et va vers le haut qui commence au rose à 0% et fini au magenta à 100% avec 2 étapes à 35 et 70%*/
-        background-clip: text;
+        z-index: -1; /*Icone coeur plein au second plan*/
+        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d96edf 35%,#b261e4 70%,$Couleur_primaire 100%); 
+        /*Un dégradé qui démarre du bas et va vers le haut qui commence de la couleur secondaire à 0% et fini à la couleur primaire à 100% avec 2 étapes à 35 et 70%*/
+        background-clip: text;/*Permet au background d'être appliqué sur le coeur qui ne prend que la propriété color normalement*/
         -webkit-background-clip: text; /*pas supporté par chrome donc obligé de passer par webkit*/
         color: transparent;
         opacity: 0;
         transform: scale(0);
-        transition: 300ms ease-in-out;
-    }  
+        transition: 300ms ease-in-out;/*L'animation commence lentement, accèlere puis ralentit à nouveau avant la fin*/
+    }
+    /*Coeurs des pages restaurants*/
+    .icone__legende .heart {
+        z-index: 1;/*Icone coeur vide au 1er plan*/
+        cursor: pointer;
+        position: relative;
+        font-size: 150%;
+    }
+    /*Icone coeur "plein" caché & transition*/
+    .icone__legende .heart-color {
+        position: absolute;
+        right: 0px;
+        z-index: -1; /*Icone coeur plein au second plan*/
+        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d96edf 35%,#b261e4 70%,$Couleur_primaire 100%); 
+        /*Un dégradé qui démarre du bas et va vers le haut qui commence de la couleur secondaire à 0% et fini à la couleur primaire à 100% avec 2 étapes à 35 et 70%*/
+        background-clip: text; /*Permet au background d'être appliqué sur le coeur qui ne prend que la propriété color normalement*/
+        -webkit-background-clip: text; /*pas supporté par chrome donc obligé de passer par webkit*/
+        color: transparent;
+        opacity: 0;
+        transform: scale(0);
+        transition: 300ms ease-in-out;/*L'animation commence lentement, accèlere puis ralentit à nouveau avant la fin*/
+    }
+    /*Au survol du coeur vide, le coeur plein devient visible et grandi*/  
     .heart:hover .heart-color {
         transform: scale(1);
         opacity: 1;
     }
+    /*Au survol du coeur vide, le coeur vide voit sa bordure prendre le même dégradé que le coeur plein pour se confondre*/
     .heart:hover {
-        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%);
+        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d96edf 35%,#b261e4 70%,$Couleur_primaire 100%);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -685,40 +750,8 @@ body {
     .carte {
         width: 50%;
     }
-    .carte_icone {
-        display: flex;
-        justify-content: flex-end;
-    }
     .carte_icone .heart {
-        width: 24px;
         padding-right: 30px;
-        z-index: 1;
-        cursor: pointer;
-        position: relative;
-    }
-    .carte_icone .heart-color {
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        z-index: -1;
-        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%); 
-        /*Un dégradé qui démarre du bas et va vers le haut qui commence au rose à 0% et fini au magenta à 100% avec 2 étapes à 35 et 70%*/
-        background-clip: text;
-        -webkit-background-clip: text; /*pas supporté par chrome donc obligé de passer par webkit*/
-        color: transparent;
-        opacity: 0;
-        transform: scale(0);
-        transition: 300ms ease-in-out;
-    }
-    .heart:hover .heart-color {
-        transform: scale(1);
-        opacity: 1;
-    }
-    .heart:hover {
-        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
     }
     /*---Pages---*/
     .menu {
@@ -730,22 +763,4 @@ body {
         justify-content: flex-end;
         grid-column-start: 2;
     }
-    .icone__legende .heart {
-        z-index: 1;
-        cursor: pointer;
-        position: relative;
-    }
-    .icone__legende .heart-color {
-        position: absolute;
-        right: 0px;
-        z-index: -1;
-        background: linear-gradient(0deg,$Couleur_secondaire 0%, #d66cdb 35%,#ab5edc 70%,$Couleur_primaire 100%); 
-        /*Un dégradé qui démarre du bas et va vers le haut qui commence au rose à 0% et fini au magenta à 100% avec 2 étapes à 35 et 70%*/
-        background-clip: text;
-        -webkit-background-clip: text; /*pas supporté par chrome donc obligé de passer par webkit*/
-        color: transparent;
-        opacity: 0;
-        transform: scale(0);
-        transition: 300ms ease-in-out;
-    }  
 }
