@@ -168,6 +168,7 @@ body {
     /*Devient plus foncé et ombres plus marquées au survol*/
     -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
             box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
   .fonctionnement__choix:hover .fas,
   .fonctionnement__composition:hover .fas,
@@ -379,10 +380,6 @@ body {
   }
   /*Nom du restaurant + icone coeur*/
   .legende {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
     padding-top: 10px;
     position: relative;
   }
@@ -398,6 +395,9 @@ body {
     position: absolute;
   }
   /*Différents type de plats*/
+  .entrees {
+    margin-top: 50px;
+  }
   .entrees h3, .plats h3, .desserts h3 {
     padding-left: 20px;
     font-size: 13px;
@@ -973,6 +973,149 @@ body {
   }
 }
 
+/*---Version Tablette---*/
+@media (min-width: 400px) {
+  /*Loadingspinner*/
+  .loadingspinner__icone--1 .fas, .loadingspinner__icone--2 .fas, .loadingspinner__icone--3 .fas {
+    font-size: 450%;
+  }
+  /*Logo header*/
+  .logo__main {
+    height: 75px;
+    padding-top: 10px;
+  }
+  .logo, .logob {
+    width: auto;
+  }
+  /*Icone flèche de retour du header des pages restaurants*/
+  .logo__mainb .fas {
+    font-size: 200%;
+  }
+  .logo__mainb a {
+    top: 35px;
+  }
+  /*Icone Localisation*/
+  .localisation .fas {
+    font-size: 110%;
+    padding-top: 3px;
+  }
+  .localisation__texte {
+    font-size: 20px;
+    width: 20%;
+  }
+  /*Slogan*/
+  .decouverte h2 {
+    font-size: 30px;
+  }
+  .decouverte p {
+    font-size: 22px;
+  }
+  /*Bouton Explorer nos restaurants*/
+  .decouverte__bouton input {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  /*Menu Fonctionnement*/
+  .fonctionnement h1 {
+    font-size: 30px;
+  }
+  .choix {
+    font-size: 23px;
+  }
+  /*Icones du menu Fonctionnement*/
+  .fonctionnement__choix .fas,
+  .fonctionnement__composition .fas,
+  .fonctionnement__degustation .fas {
+    font-size: 120%;
+    padding-top: 3px;
+  }
+  .numero {
+    width: 25px;
+    height: 25px;
+    padding-top: 2px;
+  }
+  .restaurant h1 {
+    font-size: 30px;
+  }
+  /*Mise en page photos des restaurants*/
+  .la_palette_du_gout, .la_note_enchantee, .a_la_francaise, .le_délice_des_sens {
+    height: 250px;
+  }
+  .carte__legende {
+    font-size: 18px;
+  }
+  .carte__lieu {
+    font-size: 17px;
+  }
+  /*Footer*/
+  footer h2 {
+    font-size: 25px;
+  }
+  nav p {
+    font-size: 20px;
+  }
+  /*Icones du Footer*/
+  .icone__proposition .fas {
+    font-size: 125%;
+  }
+  .icone__partenaire .fas {
+    font-size: 90%;
+  }
+  /*Titre restaurant des pages restaurants*/
+  .legende h1 {
+    font-size: 30px;
+  }
+  /*Icone coeur*/
+  .icone__legende {
+    left: 670px;
+    top: 40px;
+  }
+  .icone__legende .heart {
+    font-size: 200%;
+  }
+  .entrees h3, .plats h3, .desserts h3 {
+    font-size: 16px;
+  }
+  /*Elément de rupture thématique*/
+  hr {
+    margin: -10px 0 0 20px;
+    width: 40px;
+    position: static;
+    /*Annule position relative*/
+  }
+  /*Nom des plats*/
+  .entrees__choix1--titre strong, .entrees__choix1--titre p,
+  .entrees__choix2--titre strong, .entrees__choix2--titre p,
+  .entrees__choix3--titre strong, .entrees__choix3--titre p,
+  .entrees__choix4--titre strong, .entrees__choix4--titre p,
+  .plats__choix1--titre strong, .plats__choix1--titre p,
+  .plats__choix2--titre strong, .plats__choix2--titre p,
+  .plats__choix3--titre strong, .plats__choix3--titre p,
+  .desserts__choix1--titre strong, .desserts__choix1--titre p,
+  .desserts__choix2--titre strong, .desserts__choix2--titre p,
+  .desserts__choix3--titre strong, .desserts__choix3--titre p {
+    margin: 2px;
+    font-size: 20px;
+  }
+  /*Tarifs des plats*/
+  .entrees__choix1--tarif, .entrees__choix2--tarif, .entrees__choix3--tarif, .entrees__choix4--tarif,
+  .plats__choix1--tarif, .plats__choix2--tarif, .plats__choix3--tarif,
+  .desserts__choix1--tarif, .desserts__choix2--tarif, .desserts__choix3--tarif {
+    font-size: 20px;
+  }
+  /*Icone de validation*/
+  .valider__icone .far {
+    font-size: 230%;
+  }
+  /*Bouton de commande*/
+  .commande__bouton input {
+    font-size: 20px;
+    padding: 15px 30px;
+    width: auto;
+    /*Annule taille de la version mobile*/
+  }
+}
+
 /*---Version Desktop---*/
 @media (min-width: 800px) {
   .restaurant {
@@ -998,15 +1141,18 @@ body {
     padding-left: 300px;
     padding-right: 300px;
   }
+  /*Icone coeur page des restaurants*/
   .icone__legende {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -ms-grid-column: 2;
-        grid-column-start: 2;
+    left: 400px;
+  }
+  /*Plats du menu*/
+  .entrees__choix1, .entrees__choix2, .entrees__choix3, .entrees__choix4,
+  .plats__choix1, .plats__choix2, .plats__choix3,
+  .desserts__choix1, .desserts__choix2, .desserts__choix3 {
+    width: 400px;
+  }
+  .commande__bouton input {
+    margin-left: 15%;
   }
 }
 /*# sourceMappingURL=animation.css.map */
