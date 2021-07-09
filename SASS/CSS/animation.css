@@ -11,7 +11,7 @@ body {
   }
   /*Variable des couleurs*/
   /*Logo page d'accueil*/
-  .logo__main {
+  .logo-a {
     height: 45px;
     padding-top: 20px;
     text-align: center;
@@ -20,28 +20,29 @@ body {
     position: relative;
     /*Permet d'afficher la bordure ombrée au dessus du background gris de localisation*/
   }
+  .logo-a__accueil {
+    width: 50%;
+  }
   /*logo pages restaurants*/
-  .logo__mainb {
+  .logo-p {
     text-align: center;
     padding-top: 20px;
     padding-right: 70px;
     -webkit-column-gap: 30px;
             column-gap: 30px;
   }
+  .logo-p__page {
+    width: 50%;
+    padding-left: 5rem;
+  }
   /*Flêche de retour à la page d'accueil*/
-  .logo__mainb a {
+  .logo-p a {
     text-decoration: none;
     padding-right: 70px;
     position: absolute;
     /*Permet de placer la flèche*/
     left: 2rem;
     top: 1.5rem;
-  }
-  .logob {
-    padding-left: 5rem;
-  }
-  .logo, .logob {
-    width: 50%;
   }
   /*Champ de saisie de localisation*/
   .localisation {
@@ -148,7 +149,7 @@ body {
     padding-left: 30px;
     margin-right: 20px;
   }
-  .fonctionnement__choix, .fonctionnement__composition, .fonctionnement__degustation {
+  .fonctionnement__option {
     padding: 1.5rem;
     margin: 1rem 0 1rem 0.75rem;
     border-radius: 1.25rem;
@@ -161,24 +162,18 @@ body {
     -webkit-column-gap: 30px;
             column-gap: 30px;
   }
-  .fonctionnement__choix:hover,
-  .fonctionnement__composition:hover,
-  .fonctionnement__degustation:hover {
+  .fonctionnement__option:hover {
     background-color: #f5edff;
     /*Devient plus foncé et ombres plus marquées au survol*/
     -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
             box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
-  .fonctionnement__choix:hover .fas,
-  .fonctionnement__composition:hover .fas,
-  .fonctionnement__degustation:hover .fas {
+  .fonctionnement__option:hover .fas {
     color: #9356DC;
     /*Change l'icone de couleur au survol*/
   }
-  .fonctionnement__choix .fas,
-  .fonctionnement__composition .fas,
-  .fonctionnement__degustation .fas {
+  .fonctionnement__option .fas {
     margin-left: -40px;
   }
   /*Balise numérotée 1 à 3*/
@@ -216,11 +211,8 @@ body {
     position: relative;
     /*Permet le placement du stickers "Nouveau"*/
   }
-  .carte a {
-    text-decoration: none;
-    color: #000;
-  }
   .carte__legende {
+    /*Légende des cartes des restaurants*/
     border-radius: 0px 0px 15px 15px;
     background-color: #fff;
     margin-bottom: 20px;
@@ -233,24 +225,31 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  .carte__nom {
+  .carte__legende--nom {
+    /*Nom des restaurants dans les cartes*/
     -ms-grid-column: 1;
         grid-column-start: 1;
     -ms-grid-row: 1;
     grid-row: 1;
   }
-  .carte__lieu {
+  .carte__legende--lieu {
+    /*Lieu des restaurant dans les cartes*/
     font-size: 14px;
     -ms-grid-column: 1;
         grid-column-start: 1;
     -ms-grid-row: 2;
     grid-row: 2;
   }
+  .carte a {
+    text-decoration: none;
+    color: #000;
+  }
   .carte_icone {
     -ms-grid-column: 2;
         grid-column-start: 2;
     grid-row: span 2;
     padding-top: 10px;
+    padding-right: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -417,39 +416,8 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  /*Choix de plats*/
-  .entrees__choix1, .entrees__choix2, .entrees__choix3, .entrees__choix4,
-  .plats__choix1, .plats__choix2, .plats__choix3,
-  .desserts__choix1, .desserts__choix2, .desserts__choix3 {
-    padding: 13px;
-    margin: 15px;
-    height: 58px;
-    border-radius: 1.25rem;
-    -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    cursor: pointer;
-    white-space: nowrap;
-    /*Pas de retour à la ligne*/
-    text-overflow: ellipsis;
-    /*Met des "..." si le texte dépasse de la zone textuelle*/
-    overflow: hidden;
-    /*Cache contenue qui sort de la zone de son bloc*/
-  }
   /*Zone des intitulés des plats*/
-  .entrees__choix1--titre, .entrees__choix2--titre, .entrees__choix3--titre, .entrees__choix4--titre,
-  .plats__choix1--titre, .plats__choix2--titre, .plats__choix3--titre,
-  .desserts__choix1--titre, .desserts__choix2--titre, .desserts__choix3--titre {
+  .menu__choix--titre {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -466,16 +434,7 @@ body {
     /*Cache contenue qui sort de la zone de son bloc*/
   }
   /*Intitulés des plats*/
-  .entrees__choix1--titre strong, .entrees__choix1--titre p,
-  .entrees__choix2--titre strong, .entrees__choix2--titre p,
-  .entrees__choix3--titre strong, .entrees__choix3--titre p,
-  .entrees__choix4--titre strong, .entrees__choix4--titre p,
-  .plats__choix1--titre strong, .plats__choix1--titre p,
-  .plats__choix2--titre strong, .plats__choix2--titre p,
-  .plats__choix3--titre strong, .plats__choix3--titre p,
-  .desserts__choix1--titre strong, .desserts__choix1--titre p,
-  .desserts__choix2--titre strong, .desserts__choix2--titre p,
-  .desserts__choix3--titre strong, .desserts__choix3--titre p {
+  .menu__choix--titre strong, .menu__choix--titre p {
     text-overflow: ellipsis;
     /*Met des "..." si le texte dépasse de la zone textuelle*/
     white-space: nowrap;
@@ -485,9 +444,7 @@ body {
     margin: 5px;
   }
   /*Tarifs des plats*/
-  .entrees__choix1--tarif, .entrees__choix2--tarif, .entrees__choix3--tarif, .entrees__choix4--tarif,
-  .plats__choix1--tarif, .plats__choix2--tarif, .plats__choix3--tarif,
-  .desserts__choix1--tarif, .desserts__choix2--tarif, .desserts__choix3--tarif {
+  .menu__choix--tarif {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -586,9 +543,7 @@ body {
     color: #000;
   }
   /*Icones du menu Fonctionnement*/
-  .fonctionnement__choix .fas,
-  .fonctionnement__composition .fas,
-  .fonctionnement__degustation .fas {
+  .fonctionnement__option .fas {
     color: #7e7e7e;
   }
   /*Icones du footer*/
@@ -599,7 +554,7 @@ body {
     font-size: 70%;
   }
   /*Icone flèche retour en arrière des pages de restaurant*/
-  .logo__mainb .fas {
+  .logo-p .fas {
     color: #000;
   }
   /*--------------------------------*/
@@ -716,48 +671,106 @@ body {
               transform: translateY(0);
     }
   }
-  /*Variable durée animation des choix de plats*/
-  /*Application de la keyframe au chargement d'une page de restaurant'*/
-  .entrees__choix1 {
-    /*nom_____durée_____delay_fill-mode*/
-    -webkit-animation: menuchoix 1500ms 500ms both;
-            animation: menuchoix 1500ms 500ms both;
+  /*Variables durée/délai animation d'apparition des plats*/
+  /*Application de la keyframe au chargement d'une page de restaurant*/
+  .menu__choix {
+    padding: 13px;
+    margin: 15px;
+    height: 58px;
+    border-radius: 1.25rem;
+    -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+    white-space: nowrap;
+    /*Pas de retour à la ligne*/
+    text-overflow: ellipsis;
+    /*Met des "..." si le texte dépasse de la zone textuelle*/
+    overflow: hidden;
+    /*Cache contenue qui sort de la zone de son bloc*/
+    -webkit-animation: menuchoix 1500ms both;
+            animation: menuchoix 1500ms both;
+    /*nom keyframe / durée / extension de la propriété avec fill-mode*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
+    /*Boucle Sass permettant de répéter l'instruction jusqu'à 10 fois*/
   }
-  .entrees__choix2 {
-    -webkit-animation: menuchoix 1500ms 600ms both;
-            animation: menuchoix 1500ms 600ms both;
+  .menu__choix--1 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 150ms;
+            animation-delay: 150ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
-  .entrees__choix3 {
-    -webkit-animation: menuchoix 1500ms 700ms both;
-            animation: menuchoix 1500ms 700ms both;
+  .menu__choix--2 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
-  .entrees__choix4 {
-    -webkit-animation: menuchoix 1500ms 800ms both;
-            animation: menuchoix 1500ms 800ms both;
+  .menu__choix--3 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 450ms;
+            animation-delay: 450ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
-  .plats__choix1 {
-    -webkit-animation: menuchoix 1500ms 900ms both;
-            animation: menuchoix 1500ms 900ms both;
+  .menu__choix--4 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 600ms;
+            animation-delay: 600ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
-  .plats__choix2 {
-    -webkit-animation: menuchoix 1500ms 1000ms both;
-            animation: menuchoix 1500ms 1000ms both;
+  .menu__choix--5 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 750ms;
+            animation-delay: 750ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
-  .plats__choix3 {
-    -webkit-animation: menuchoix 1500ms 1100ms both;
-            animation: menuchoix 1500ms 1100ms both;
+  .menu__choix--6 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 900ms;
+            animation-delay: 900ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
-  .desserts__choix1 {
-    -webkit-animation: menuchoix 1500ms 1200ms both;
-            animation: menuchoix 1500ms 1200ms both;
+  .menu__choix--7 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 1050ms;
+            animation-delay: 1050ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
-  .desserts__choix2 {
-    -webkit-animation: menuchoix 1500ms 1300ms both;
-            animation: menuchoix 1500ms 1300ms both;
+  .menu__choix--8 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 1200ms;
+            animation-delay: 1200ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
-  .desserts__choix3 {
-    -webkit-animation: menuchoix 1500ms 1400ms both;
-            animation: menuchoix 1500ms 1400ms both;
+  .menu__choix--9 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 1350ms;
+            animation-delay: 1350ms;
+    /*Délai en fonction de l'ordre numéroté*/
+  }
+  .menu__choix--10 {
+    /*& ----> .menu__choix*/
+    -webkit-animation-delay: 1500ms;
+            animation-delay: 1500ms;
+    /*Délai en fonction de l'ordre numéroté*/
   }
   /*--------------------------------*/
   /*---Animation choix coche menu---*/
@@ -828,60 +841,24 @@ body {
   }
   /*Variable durée animation choix menu*/
   /*Application de la keyframe sur la zone de intitulé des plats au survol des choix du menu*/
-  .entrees__choix1:hover .entrees__choix1--titre,
-  .entrees__choix2:hover .entrees__choix2--titre,
-  .entrees__choix3:hover .entrees__choix3--titre,
-  .entrees__choix4:hover .entrees__choix4--titre,
-  .plats__choix1:hover .plats__choix1--titre,
-  .plats__choix2:hover .plats__choix2--titre,
-  .plats__choix3:hover .plats__choix3--titre,
-  .desserts__choix1:hover .desserts__choix1--titre,
-  .desserts__choix2:hover .desserts__choix2--titre,
-  .desserts__choix3:hover .desserts__choix3--titre {
+  .menu__choix:hover .menu__choix--titre {
     /*nom keyframe  durée*/
     -webkit-animation: indication 700ms both;
             animation: indication 700ms both;
     /*both: permet d'étendre la propriétéde la keyframe*/
   }
   /*Application de la keyframe sur la coche au survol des choix du menu*/
-  .entrees__choix1:hover .valider,
-  .entrees__choix2:hover .valider,
-  .entrees__choix3:hover .valider,
-  .entrees__choix4:hover .valider,
-  .plats__choix1:hover .valider,
-  .plats__choix2:hover .valider,
-  .plats__choix3:hover .valider,
-  .desserts__choix1:hover .valider,
-  .desserts__choix2:hover .valider,
-  .desserts__choix3:hover .valider {
+  .menu__choix:hover .valider {
     -webkit-animation: valider 700ms both;
             animation: valider 700ms both;
   }
   /*Application de la keyframe sur l'icone de la coche au survol des choix du menu*/
-  .entrees__choix1:hover .valider__icone,
-  .entrees__choix2:hover .valider__icone,
-  .entrees__choix3:hover .valider__icone,
-  .entrees__choix4:hover .valider__icone,
-  .plats__choix1:hover .valider__icone,
-  .plats__choix2:hover .valider__icone,
-  .plats__choix3:hover .valider__icone,
-  .desserts__choix1:hover .valider__icone,
-  .desserts__choix2:hover .valider__icone,
-  .desserts__choix3:hover .valider__icone {
+  .menu__choix:hover .valider__icone {
     -webkit-animation: valider__icone 700ms both;
             animation: valider__icone 700ms both;
   }
   /*Application de la keyframe sur les tarifs au survol des choix du menu*/
-  .entrees__choix1:hover .entrees__choix1--tarif,
-  .entrees__choix2:hover .entrees__choix2--tarif,
-  .entrees__choix3:hover .entrees__choix3--tarif,
-  .entrees__choix4:hover .entrees__choix4--tarif,
-  .plats__choix1:hover .plats__choix1--tarif,
-  .plats__choix2:hover .plats__choix2--tarif,
-  .plats__choix3:hover .plats__choix3--tarif,
-  .desserts__choix1:hover .desserts__choix1--tarif,
-  .desserts__choix2:hover .desserts__choix2--tarif,
-  .desserts__choix3:hover .desserts__choix3--tarif {
+  .menu__choix:hover .menu__choix--tarif {
     -webkit-animation: tarif 700ms both;
             animation: tarif 700ms both;
   }
@@ -894,7 +871,6 @@ body {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding-right: 20px;
     width: 24px;
     font-size: 150%;
     z-index: 1;
@@ -903,13 +879,8 @@ body {
     position: relative;
   }
   /*Icone coeur "plein" caché & transition*/
-  .carte_icone .heart-color {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+  .carte_icone .heart-color, .icone__legende .heart-color {
+    right: 0px;
     position: absolute;
     z-index: -1;
     /*Icone coeur plein au second plan*/
@@ -936,27 +907,6 @@ body {
     position: relative;
     font-size: 150%;
   }
-  /*Icone coeur "plein" caché & transition*/
-  .icone__legende .heart-color {
-    position: absolute;
-    right: 0px;
-    z-index: -1;
-    /*Icone coeur plein au second plan*/
-    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(35%, #d96edf), color-stop(70%, #b261e4), to(#9356DC));
-    background: linear-gradient(0deg, #FF79DA 0%, #d96edf 35%, #b261e4 70%, #9356DC 100%);
-    /*Un dégradé qui démarre du bas et va vers le haut qui commence de la couleur secondaire à 0% et fini à la couleur primaire à 100% avec 2 étapes à 35 et 70%*/
-    background-clip: text;
-    /*Permet au background d'être appliqué sur le coeur qui ne prend que la propriété color normalement*/
-    -webkit-background-clip: text;
-    /*pas supporté par chrome donc obligé de passer par webkit*/
-    color: transparent;
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transition: 300ms ease-in-out;
-    transition: 300ms ease-in-out;
-    /*L'animation commence lentement, accèlere puis ralentit à nouveau avant la fin*/
-  }
   /*Au survol du coeur vide, le coeur plein devient visible et grandi*/
   .heart:hover .heart-color {
     -webkit-transform: scale(1);
@@ -980,18 +930,21 @@ body {
     font-size: 450%;
   }
   /*Logo header*/
-  .logo__main {
+  .logo-a {
     height: 75px;
     padding-top: 10px;
   }
-  .logo, .logob {
+  .logo-a__accueil {
+    width: auto;
+  }
+  .logo-p__page {
     width: auto;
   }
   /*Icone flèche de retour du header des pages restaurants*/
-  .logo__mainb .fas {
+  .logo-p .fas {
     font-size: 200%;
   }
-  .logo__mainb a {
+  .logo-p a {
     top: 35px;
   }
   /*Icone Localisation*/
@@ -1023,9 +976,7 @@ body {
     font-size: 23px;
   }
   /*Icones du menu Fonctionnement*/
-  .fonctionnement__choix .fas,
-  .fonctionnement__composition .fas,
-  .fonctionnement__degustation .fas {
+  .fonctionnement__option .fas {
     font-size: 120%;
     padding-top: 3px;
   }
@@ -1044,7 +995,7 @@ body {
   .carte__legende {
     font-size: 18px;
   }
-  .carte__lieu {
+  .carte__legende--lieu {
     font-size: 17px;
   }
   /*Footer*/
@@ -1084,23 +1035,12 @@ body {
     /*Annule position relative*/
   }
   /*Nom des plats*/
-  .entrees__choix1--titre strong, .entrees__choix1--titre p,
-  .entrees__choix2--titre strong, .entrees__choix2--titre p,
-  .entrees__choix3--titre strong, .entrees__choix3--titre p,
-  .entrees__choix4--titre strong, .entrees__choix4--titre p,
-  .plats__choix1--titre strong, .plats__choix1--titre p,
-  .plats__choix2--titre strong, .plats__choix2--titre p,
-  .plats__choix3--titre strong, .plats__choix3--titre p,
-  .desserts__choix1--titre strong, .desserts__choix1--titre p,
-  .desserts__choix2--titre strong, .desserts__choix2--titre p,
-  .desserts__choix3--titre strong, .desserts__choix3--titre p {
+  .menu__choix--titre strong, .menu__choix--titre p {
     margin: 2px;
     font-size: 20px;
   }
   /*Tarifs des plats*/
-  .entrees__choix1--tarif, .entrees__choix2--tarif, .entrees__choix3--tarif, .entrees__choix4--tarif,
-  .plats__choix1--tarif, .plats__choix2--tarif, .plats__choix3--tarif,
-  .desserts__choix1--tarif, .desserts__choix2--tarif, .desserts__choix3--tarif {
+  .menu__choix--tarif {
     font-size: 20px;
   }
   /*Icone de validation*/
@@ -1134,25 +1074,44 @@ body {
     width: 50%;
   }
   .carte_icone .heart {
-    padding-right: 30px;
+    width: 36px;
   }
   /*---Pages---*/
   .menu {
-    padding-left: 300px;
-    padding-right: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .legende, .entrees, .plats, .desserts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /*Mise en page photo des pages restaurants*/
+  .photo_la_palette_du_gout, .photo_a_la_francaise, .photo_la_note_enchantée, .photo_le_délice_des_sens {
+    height: 400px;
   }
   /*Icone coeur page des restaurants*/
   .icone__legende {
-    left: 400px;
+    left: 310px;
   }
   /*Plats du menu*/
-  .entrees__choix1, .entrees__choix2, .entrees__choix3, .entrees__choix4,
-  .plats__choix1, .plats__choix2, .plats__choix3,
-  .desserts__choix1, .desserts__choix2, .desserts__choix3 {
+  .menu__choix {
     width: 400px;
-  }
-  .commande__bouton input {
-    margin-left: 15%;
   }
 }
 /*# sourceMappingURL=animation.css.map */
