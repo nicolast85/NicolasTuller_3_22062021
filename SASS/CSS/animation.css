@@ -5,11 +5,25 @@ body {
 }
 
 /*----Version Mobile----*/
-@media (min-width: 300px) {
+@media (min-width: 50px) {
   #bloc_page {
     width: auto;
   }
+  /*--------------------------*/
+  /*---------VARIABLES--------*/
+  /*--------------------------*/
   /*Variable des couleurs*/
+  /*Variable durée animation loader/apparition des plats page menu*/
+  /*Variable délai animation d'apparition des plats*/
+  /*Variable durée animation choix menu*/
+  /*--------------------------*/
+  /*----------MIXINS----------*/
+  /*--------------------------*/
+  /*Mixin mise en page images des cartes*/
+  /*Mixin mise en page des photos des pages restaurants*/
+  /*Mixin positionnement des icones du footer*/
+  /*Mixin pas de retour à la ligne/... si texte dépasse*/
+  /*Fait le lien avec le fichier SCSS contenant les variables/mixins*/
   /*Logo page d'accueil*/
   .logo-a {
     height: 45px;
@@ -70,6 +84,7 @@ body {
     background: none;
     text-align: center;
     font-weight: bold;
+    text-overflow: ellipsis;
     color: #000;
     width: 45%;
   }
@@ -333,35 +348,35 @@ body {
     border-radius: 2px;
     font-weight: bold;
   }
-  /*Mixin mise en page images des cartes*/
   /*Mise en page des images des cartes*/
   .la_palette_du_gout {
     background-image: url("../../images/photos/la_palette_du_gout.jpg");
     background-size: cover;
     background-position: center;
-    height: 180px;
     border-radius: 15px 15px 0px 0px;
+    height: 180px;
+    /*Application de la mixin*/
   }
   .la_note_enchantee {
     background-image: url("../../images/photos/la_note_enchantee.jpg");
     background-size: cover;
     background-position: center;
-    height: 180px;
     border-radius: 15px 15px 0px 0px;
+    height: 180px;
   }
   .a_la_francaise {
     background-image: url("../../images/photos/a_la_francaise.jpg");
     background-size: cover;
     background-position: center;
-    height: 180px;
     border-radius: 15px 15px 0px 0px;
+    height: 180px;
   }
   .le_délice_des_sens {
     background-image: url("../../images/photos/le_delice_des_sens.jpg");
     background-size: cover;
     background-position: center;
-    height: 180px;
     border-radius: 15px 15px 0px 0px;
+    height: 180px;
   }
   /*------------*/
   /*---Footer---*/
@@ -392,7 +407,12 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .icone__proposition, .icone__partenaire {
+  nav p:hover {
+    text-decoration: underline;
+    /*Souligne les liens au survol*/
+  }
+  /*Icone du Footer*/
+  .icone__proposition {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -404,6 +424,25 @@ body {
     margin-left: 25px;
     margin-bottom: -10px;
     margin-top: -20px;
+  }
+  .icone__proposition .fas {
+    font-size: 105%;
+  }
+  .icone__partenaire {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 25px;
+    margin-bottom: -10px;
+    margin-top: -20px;
+  }
+  .icone__partenaire .fas {
+    font-size: 70%;
   }
   /*Mise en page photo des pages restaurants*/
   .photo_a_la_francaise {
@@ -540,6 +579,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     opacity: 0;
+    /*Invisible*/
   }
   .valider__icone {
     /*Zone de l'icone de la coche de validation*/
@@ -552,6 +592,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    /*Duplication sinon décalage icone*/
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -600,16 +641,6 @@ body {
             box-shadow: 0px 10px 5px lightgrey;
     /*Ombre portée légèrement plus visisble*/
   }
-  /*----------------------*/
-  /*---Style des icones---*/
-  /*----------------------*/
-  /*Icones du footer*/
-  .icone__proposition .fas {
-    font-size: 105%;
-  }
-  .icone__partenaire .fas {
-    font-size: 70%;
-  }
   /*------------------------------*/
   /*---Animation page d'accueil---*/
   /*------------------------------*/
@@ -632,7 +663,6 @@ body {
       z-index: -10;
     }
   }
-  /*Variable durée animation loader/apparation des plats page menu*/
   /*Loader*/
   .loadingspinner {
     width: 100%;
@@ -783,8 +813,6 @@ body {
       margin-right: 60px;
     }
   }
-  /*Variables délai animation d'apparition des plats*/
-  /*Variable durée animation choix menu*/
   /*Application de la keyframe au chargement d'une page de restaurant*/
   .menu__choix {
     padding: 13px;
@@ -904,20 +932,20 @@ body {
   }
   .menu__choix--titre strong {
     /*Intitulés des plats*/
-    text-overflow: ellipsis;
-    /*Met des "..." si le texte dépasse de la zone textuelle*/
     white-space: nowrap;
     /*Pas de retour à la ligne*/
+    text-overflow: ellipsis;
+    /*Met des "..." si le texte dépasse de la zone textuelle*/
     overflow: hidden;
     /*Cache contenue qui sort de la zone de son bloc*/
     margin: 5px;
   }
   .menu__choix--titre p {
     /*Indications des plats*/
-    text-overflow: ellipsis;
-    /*Met des "..." si le texte dépasse de la zone textuelle*/
     white-space: nowrap;
     /*Pas de retour à la ligne*/
+    text-overflow: ellipsis;
+    /*Met des "..." si le texte dépasse de la zone textuelle*/
     overflow: hidden;
     /*Cache contenue qui sort de la zone de son bloc*/
     margin: 5px;

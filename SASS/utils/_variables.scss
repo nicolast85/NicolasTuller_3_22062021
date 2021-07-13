@@ -1,0 +1,50 @@
+ /*--------------------------*/
+ /*---------VARIABLES--------*/
+ /*--------------------------*/
+ /*Variable des couleurs*/
+ $Couleur_primaire: #9356DC;
+ $Couleur_secondaire: #FF79DA;
+ $Couleur_tertiaire: #99E2D0;
+ $Couleur_quaternaire: #f6f6f6;
+ $Couleur_quinaire: #fff;
+ $Couleur_senaire: #000;
+
+ /*Variable durée animation loader/apparition des plats page menu*/
+ $anim-dur: 1500ms;
+ /*Variable délai animation d'apparition des plats*/
+ $anim-delay: $anim-dur / 10;
+ /*Variable durée animation choix menu*/
+ $anim-dur_menu: 700ms;
+
+ /*--------------------------*/
+ /*----------MIXINS----------*/
+ /*--------------------------*/
+ /*Mixin mise en page images des cartes*/
+ @mixin mise-en-page-image{
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0px 0px;
+    height: 180px;
+}
+/*Mixin mise en page des photos des pages restaurants*/
+@mixin mise-en-photo-image{
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+    height: 300px;
+}
+/*Mixin positionnement des icones du footer*/
+@mixin icone-footer{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin-left: 25px;
+    margin-bottom: -10px;
+    margin-top: -20px;
+}
+/*Mixin pas de retour à la ligne/... si texte dépasse*/
+@mixin overflow{
+    white-space: nowrap;    /*Pas de retour à la ligne*/
+    text-overflow: ellipsis;/*Met des "..." si le texte dépasse de la zone textuelle*/
+    overflow: hidden;       /*Cache contenue qui sort de la zone de son bloc*/
+}
