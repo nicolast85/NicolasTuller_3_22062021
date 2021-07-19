@@ -97,6 +97,7 @@ body {
                 margin-bottom: 50px;
             }
             &:hover { /*Animation au survol*/
+                font-size: 16px;
                 input {
                     transition-duration: 1000ms;
                     opacity: 0.80;                          /*S'éclaire*/
@@ -443,6 +444,7 @@ body {
             width: 170px;
         }
         &:hover { /*Animation au survol*/
+            font-size: 16px;
             input {
                 transition-duration: 1000ms;
                 opacity: 0.80;                          /*S'éclaire*/

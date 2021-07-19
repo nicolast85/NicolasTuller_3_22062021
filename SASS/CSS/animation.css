@@ -154,6 +154,7 @@ body {
   }
   .decouverte__bouton:hover {
     /*Animation au survol*/
+    font-size: 16px;
   }
   .decouverte__bouton:hover input {
     -webkit-transition-duration: 1000ms;
@@ -631,6 +632,7 @@ body {
   }
   .commande__bouton:hover {
     /*Animation au survol*/
+    font-size: 16px;
   }
   .commande__bouton:hover input {
     -webkit-transition-duration: 1000ms;
