@@ -609,6 +609,32 @@ body {
         }
     }
 }
+@media (min-width: 270px) {
+    /*Icone coeur*/
+    .legende__icone {
+        left: 240px;
+        top: 29px;
+        .heart {
+            font-size: 170%;
+        }
+    }
+}
+@media (min-width: 300px) {
+    /*Icone coeur*/
+    .legende__icone {
+        left: 270px;
+        top: 30px;
+        .heart {
+            font-size: 180%;
+        }
+    }
+}
+@media (min-width: 370px) {
+    .legende__icone {
+        left: 320px;
+        top: 35px;
+    }
+}
 /*---Version Tablette---*/
 @media (min-width: 400px) {
     /*Loadingspinner*/
@@ -620,18 +646,19 @@ body {
         height: 75px;
         padding-top: 10px;
             &__accueil {
-                width: auto;
+                width: 70%;
+                padding-top: 5px;
             }
     }
     .logo-p {
         &__page {
-            width: auto;
+            width: 70%;
         }
         .fas { /*Icone flèche de retour du header des pages restaurants*/
             font-size: 200%;
         }
         a {
-            top: 35px;
+            top: 25px;
         }
     } 
     /*Icone Localisation*/
@@ -723,7 +750,7 @@ body {
     }
     /*Icone coeur*/
     .legende__icone {
-        left: 670px;
+        left: 380px;
         top: 40px;
         .heart {
             font-size: 200%;
@@ -768,8 +795,24 @@ body {
         }
     }
 }
+@media (min-width: 700px) {
+    .logo-a__accueil {
+        width: auto;
+        padding-top: 0px;
+    }
+    .logo-p a {
+        top: 40px;
+    }
+    /*Icone coeur*/
+    .legende__icone {
+        left: 680px;
+    }
+}
 /*---Version Desktop---*/
 @media (min-width: 800px) {
+    .logo-p a {
+        top: 50px;
+    }
     .restaurant {
         display: flex;
         flex-direction: column;
