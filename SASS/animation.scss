@@ -810,8 +810,8 @@ body {
 }
 /*---Version Desktop---*/
 @media (min-width: 800px) {
-    .logo-p a {
-        top: 50px;
+    .logo-p__page {
+        width: auto;
     }
     .restaurant {
         display: flex;

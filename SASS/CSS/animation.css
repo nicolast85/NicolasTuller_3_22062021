@@ -970,9 +970,6 @@ body {
     /*Met des "..." si le texte dépasse de la zone textuelle*/
     padding-bottom: 5px;
   }
-  .menu__choix:hover {
-    /*Application de la keyframe sur la zone de intitulé des plats au survol des choix du menu*/
-  }
   .menu__choix:hover .menu__choix--titre {
     -webkit-animation: indication 700ms both;
             animation: indication 700ms both;
@@ -1137,9 +1134,6 @@ body {
     position: static;
     /*Annule position relative*/
   }
-  .menu__choix--titre {
-    /*Nom des plats*/
-  }
   .menu__choix--titre strong {
     margin: 2px;
     font-size: 20px;
@@ -1181,8 +1175,8 @@ body {
 
 /*---Version Desktop---*/
 @media (min-width: 800px) {
-  .logo-p a {
-    top: 50px;
+  .logo-p__page {
+    width: auto;
   }
   .restaurant {
     display: -webkit-box;
