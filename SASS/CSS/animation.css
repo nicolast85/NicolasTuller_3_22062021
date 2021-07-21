@@ -301,7 +301,7 @@ body {
     /*Au survol du coeur vide, le coeur vide voit sa bordure prendre le même dégradé que le coeur plein pour se confondre*/
     background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(35%, #d96edf), color-stop(70%, #b261e4), to(#9356DC));
     background: linear-gradient(0deg, #FF79DA 0%, #d96edf 35%, #b261e4 70%, #9356DC 100%);
-    background-clip: text;
+    /*background-clip: text;*/
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -320,7 +320,7 @@ body {
     background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(35%, #d96edf), color-stop(70%, #b261e4), to(#9356DC));
     background: linear-gradient(0deg, #FF79DA 0%, #d96edf 35%, #b261e4 70%, #9356DC 100%);
     /*Un dégradé qui démarre du bas et va vers le haut qui commence de la couleur secondaire à 0% et fini à la couleur primaire à 100% avec 2 étapes à 35 et 70%*/
-    background-clip: text;
+    /*background-clip: text;*/
     /*Permet au background d'être appliqué sur le coeur qui ne prend que la propriété color normalement*/
     -webkit-background-clip: text;
     /*pas supporté par chrome donc obligé de passer par webkit*/
@@ -510,7 +510,7 @@ body {
     /*Au survol du coeur vide, le coeur vide voit sa bordure prendre le même dégradé que le coeur plein pour se confondre*/
     background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(35%, #d96edf), color-stop(70%, #b261e4), to(#9356DC));
     background: linear-gradient(0deg, #FF79DA 0%, #d96edf 35%, #b261e4 70%, #9356DC 100%);
-    background-clip: text;
+    /*background-clip: text;*/
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -529,7 +529,7 @@ body {
     background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(35%, #d96edf), color-stop(70%, #b261e4), to(#9356DC));
     background: linear-gradient(0deg, #FF79DA 0%, #d96edf 35%, #b261e4 70%, #9356DC 100%);
     /*Un dégradé qui démarre du bas et va vers le haut qui commence de la couleur secondaire à 0% et fini à la couleur primaire à 100% avec 2 étapes à 35 et 70%*/
-    background-clip: text;
+    /*background-clip: text;*/
     /*Permet au background d'être appliqué sur le coeur qui ne prend que la propriété color normalement*/
     -webkit-background-clip: text;
     /*pas supporté par chrome donc obligé de passer par webkit*/
